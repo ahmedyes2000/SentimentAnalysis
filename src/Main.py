@@ -11,7 +11,6 @@ from src.Tokenizer import Tokenizer
 from src.SimpleTokenizer import SimpleTokenizer
 import numpy as np
 from sklearn.model_selection import KFold
-import matplotlib.pyplot as plt
 
 # Path to dataset
 PATH_TO_POLARITY_DATA = '../../Datasets/review_polarity/txt_sentoken/'
@@ -121,31 +120,6 @@ def evaluateSubjectivity(k, tokenizer: Tokenizer, alphas):
     return accuracies
 
 
-def plotAccuracies(tokenizerName, alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies):
-    line_rp, = plt.plot(alphas, reviewPolarityAccuracies, 'r', label='PL04')
-    line_imdb, = plt.plot(alphas, imdbAccuracies, 'b', label='IMDB Dataset')
-    line_subjectivity, = plt.plot(alphas, subjectivityAccuracies, 'g', label='Subjectivity')
-
-    plt.legend(handles=[line_rp, line_imdb, line_subjectivity], bbox_to_anchor=(0., 1.02, 1., .102), loc=5,
-               ncol=3, mode="expand", borderaxespad=0.)
-    plt.xlabel('Pseduo counts', fontsize=16)
-    plt.ylabel('Accuracy', fontsize=16)
-
-    fig = plt.gcf()
-    plt.show()
-    plt.draw()
-    fig.savefig("../results/{0}_Accuracy.png".format(tokenizerName.replace(" ", "_")))
-
-
-def printTable(tokenizerName, alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies):
-    print("###{0}".format(tokenizerName))
-    print("| Alpha  | PL04 | IMDB Dataset | Subjectivity |")
-    print("|---|:---:|:---:|:---:|")
-    for i in range(len(alphas)):
-        print("| {0}  | {1}  | {2} | {3} |".format(alphas[i], reviewPolarityAccuracies[i], imdbAccuracies[i], subjectivityAccuracies[i]))
-    plotAccuracies(tokenizerName, alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies)
-
-
 def printClassifierStatistics(classifier):
     classifier.report_statistics_after_training()
     print("Top 20 tokens in the positive class")
@@ -176,9 +150,9 @@ alphas = [1, 5, 10, 15, 20, 25, 30, 35]
 # subjectivityAccuracies = [0.8961038961038961, 0.9050949050949051, 0.9050949050949051, 0.9015984015984015, 0.8986013986013986, 0.8966033966033966, 0.8946053946053946, 0.8931068931068931]
 # printTable("Advanced Tokenizer", alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies)
 
-reviewPolarityAccuracies = [0.8425, 0.86, 0.8525, 0.8525, 0.83, 0.83, 0.8175, 0.8125]
-imdbAccuracies = [0.8624, 0.86788, 0.86712, 0.86568, 0.86372, 0.86164, 0.86056, 0.85956]
-subjectivityAccuracies = [0.9015984015984015, 0.8981018981018981, 0.8921078921078921, 0.8901098901098901, 0.8871128871128872, 0.8846153846153846, 0.8826173826173827, 0.8811188811188811]
-printTable("Bigram Tokenizer", alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies)
+# reviewPolarityAccuracies = [0.8425, 0.86, 0.8525, 0.8525, 0.83, 0.83, 0.8175, 0.8125]
+# imdbAccuracies = [0.8624, 0.86788, 0.86712, 0.86568, 0.86372, 0.86164, 0.86056, 0.85956]
+# subjectivityAccuracies = [0.9015984015984015, 0.8981018981018981, 0.8921078921078921, 0.8901098901098901, 0.8871128871128872, 0.8846153846153846, 0.8826173826173827, 0.8811188811188811]
+# printTable("Bigram Tokenizer", alphas, reviewPolarityAccuracies, imdbAccuracies, subjectivityAccuracies)
 
 # print(imdbAccuracies)

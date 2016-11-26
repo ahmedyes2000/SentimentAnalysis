@@ -13,6 +13,18 @@ class AdvancedTokenizer(Tokenizer):
         self.stopWords = set(stopwords.words('english'))
         self.regex = re.compile("[^\w\s]|_")
 
+    def __call__(self, doc):
+        return self.tokenize_content(doc)
+
+    def tokenize_content(self, content):
+        tokens = self.tokenizer.tokenize(content)
+        lowered_tokens = map(lambda t: self.scrubToken(t), tokens)
+        scrubbedTokens = []
+        for token in lowered_tokens:
+            if token not in self.stopWords and token != '':
+                scrubbedTokens.append(token)
+        return scrubbedTokens
+
     def tokenize(self, document: Document):
         bow = defaultdict(float)
         content = document.getContent()

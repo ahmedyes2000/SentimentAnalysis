@@ -46,3 +46,34 @@
 
 ![Bigram Tokenizer Accuracy]
 (/results/Bigram_Tokenizer_Accuracy.png)
+
+## Multinomial NB Classifier
+### Advanced Tokenizer
+| Alpha  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 1  | 0.815  | 0.83312 | 0.9045954045954046 |
+| 5  | 0.7925  | 0.82372 | 0.8926073926073926 |
+| 10  | 0.775  | 0.81264 | 0.8846153846153846 |
+| 15  | 0.75  | 0.80308 | 0.8821178821178821 |
+| 20  | 0.735  | 0.79548 | 0.8791208791208791 |
+| 25  | 0.73  | 0.789 | 0.8766233766233766 |
+| 30  | 0.725  | 0.78288 | 0.8736263736263736 |
+| 35  | 0.7175  | 0.77832 | 0.8736263736263736 |
+![Advanced Tokenizer Accuracy]
+(/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
+
+## Bernoulli NB Classifier
+###Advanced Tokenizer
+| Alpha  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 1  | 0.8125  | 0.82504 | 0.906093906093906 |
+| 5  | 0.7575  | 0.8258 | 0.8911088911088911 |
+| 10  | 0.72  | 0.82388 | 0.8786213786213786 |
+| 15  | 0.69  | 0.82156 | 0.8646353646353646 |
+| 20  | 0.6625  | 0.81916 | 0.8581418581418582 |
+| 25  | 0.625  | 0.81588 | 0.8466533466533467 |
+| 30  | 0.6025  | 0.8134 | 0.8386613386613386 |
+| 35  | 0.59  | 0.81132 | 0.8266733266733267 |
+![Advanced Tokenizer Accuracy]
+(/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
+

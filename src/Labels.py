@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class Labels(Enum):
+class Labels(IntEnum):
     strong_pos = 1
     weak_pos = 2
     strong_neg = 3
