@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Analyzer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/KNearestNeighbours.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VectorRepresentationImplementation.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/results/Advanced_Tokenizer_Accuracy.png" afterPath="$PROJECT_DIR$/results/Naive Bayes Classifier/Advanced_Tokenizer_Accuracy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/results/Bigram_Tokenizer_Accuracy.png" afterPath="$PROJECT_DIR$/results/Naive Bayes Classifier/Bigram_Tokenizer_Accuracy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/results/Simple_Tokenizer_Accuracy.png" afterPath="$PROJECT_DIR$/results/Naive Bayes Classifier/Simple_Tokenizer_Accuracy.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results.md" afterPath="$PROJECT_DIR$/Results.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdvancedTokenizer.py" afterPath="$PROJECT_DIR$/src/AdvancedTokenizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Labels.py" afterPath="$PROJECT_DIR$/src/Labels.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.py" afterPath="$PROJECT_DIR$/src/Main.py" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />

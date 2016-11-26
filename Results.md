@@ -14,7 +14,7 @@
 | 35  | 0.845  | 0.83652 | 0.908591409 |
 
 ![Simple Tokenizer Accuracy]
-(/results/Simple_Tokenizer_Accuracy.png)
+(/results/Naive Bayes Classifier/Simple_Tokenizer_Accuracy.png)
 
 ###Advanced Tokenizer
 | Alpha  | PL04 | IMDB Dataset | Subjectivity |
@@ -30,7 +30,7 @@
 
 
 ![Advanced Tokenizer Accuracy]
-(/results/Advanced_Tokenizer_Accuracy.png)
+(/results/Naive Bayes Classifier/Advanced_Tokenizer_Accuracy.png)
 
 ###Bigram Tokenizer
 | Alpha  | PL04 | IMDB Dataset | Subjectivity |
@@ -45,7 +45,7 @@
 | 35  | 0.8125  | 0.85956 | 0.8811188811188811 |
 
 ![Bigram Tokenizer Accuracy]
-(/results/Bigram_Tokenizer_Accuracy.png)
+(/results/Naive Bayes Classifier/Bigram_Tokenizer_Accuracy.png)
 
 ## Multinomial NB Classifier
 ### Advanced Tokenizer
