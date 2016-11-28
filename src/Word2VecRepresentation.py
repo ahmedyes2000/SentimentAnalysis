@@ -2,6 +2,7 @@ import numpy as np
 from gensim.models import Word2Vec
 from sklearn.svm import SVC
 
+from src.Corpus.ReviewPolarityCorpus import ReviewPolarityCorpus
 from src.Corpus.SubjectivityCorpus import SubjectivityCorpus
 from src.Tokenizers.AdvancedTokenizer import AdvancedTokenizer
 
@@ -27,9 +28,30 @@ def file_to_vector(files, model, number_of_features):
 
     return converted_files
 
-def review_subjectivity():
+def evaluate_review_polarity():
     '''
     Function to measure the accuracy of a classifier on the review polarity data set.
+    :return: the accuracy calculated by the classifier
+    '''
+    number_of_features = 10000
+    review_polarity_corpus = ReviewPolarityCorpus(tokenizer)
+
+    model = Word2Vec(review_polarity_corpus, min_count=1, size=number_of_features)
+
+    X_train_files, y_train_labels = review_polarity_corpus.get_training_data()
+    X_test_files, y_test_labels = review_polarity_corpus.get_test_data()
+
+    X_train_data = file_to_vector(X_train_files, model, number_of_features)
+    X_test_data = file_to_vector(X_test_files, model, number_of_features)
+
+    classifier = SVC()
+    classifier.fit(X_train_data, y_train_labels)
+    score = classifier.score(X_test_data, y_test_labels)
+    return score
+
+def evaluate_subjectivity():
+    '''
+    Function to measure the accuracy of a classifier on the subjectivity data set.
     :return: the accuracy calculated by the classifier
     '''
     number_of_features = 100
@@ -48,6 +70,7 @@ def review_subjectivity():
     score = classifier.score(X_test_data, y_test_labels)
     return score
 
-subjectivity_accuracy = review_subjectivity()
-print(subjectivity_accuracy)
+review_polarity_accuracy = evaluate_review_polarity()
+# subjectivity_accuracy = evaluate_subjectivity()
+print(review_polarity_accuracy)
 

@@ -3,72 +3,74 @@ import os
 from src.Labels import Labels
 
 
-class SubjectivityCorpus(object):
-    PATH_TO_SUBJECTIVITY_DATA_SUBJECTIVE = '../../Datasets/rotten_imdb/quote.tok.gt9.5000'
-    PATH_TO_SUBJECTIVITY_DATA_OBJECTIVE = '../../Datasets/rotten_imdb/plot.tok.gt9.5000'
+class ReviewPolarityCorpus(object):
+    PATH_TO_POLARITY_DATA = '../../Datasets/review_polarity/txt_sentoken/'
+    POS_LABEL = 'pos'
+    NEG_LABEL = 'neg'
 
     def __init__(self, tokenizer):
         self.tokenizer = tokenizer
 
-        objective_data_stream = self.stream_documents(self.PATH_TO_SUBJECTIVITY_DATA_OBJECTIVE, Labels.strong_pos)
-        subjective_data_stream = self.stream_documents(self.PATH_TO_SUBJECTIVITY_DATA_SUBJECTIVE, Labels.strong_neg)
+        pos_path = os.path.join(self.PATH_TO_POLARITY_DATA, self.POS_LABEL)
+        neg_path = os.path.join(self.PATH_TO_POLARITY_DATA, self.NEG_LABEL)
 
-        self.X_objective_data, self.y_obj_labels = zip(*objective_data_stream)
-        self.X_subjective_data, self.y_subj_labels = zip(*subjective_data_stream)
+        pos_data_stream = self.stream_documents(Labels.strong_pos, pos_path, os.listdir(pos_path))
+        neg_data_stream = self.stream_documents(Labels.strong_neg, neg_path, os.listdir(neg_path))
 
-    def stream_subjectivity_documents(self, data_path):
-        """Iterate over documents of the Subjectivity dataset.
+        self.X_pos_data, self.y_pos_labels = zip(*pos_data_stream)
+        self.X_neg_data, self.y_neg_labels = zip(*neg_data_stream)
 
-        Documents are represented as strings.
-
-        """
-
-        if os.path.exists(data_path):
-            with open(data_path, "r", encoding='ISO-8859-1') as doc:
-                content = doc.read()
-                files = content.split('\n')
-                for file in files:
-                    yield file
-
-    def stream_documents(self, data_path, label):
-        """Iterate over documents of the Subjectivity dataset.
+    def stream_polarity_documents(self, dir_name):
+        """Iterate over documents of the review polarity data set.
 
         Documents are represented as strings.
 
         """
 
-        if os.path.exists(data_path):
-            with open(data_path, "r", encoding='ISO-8859-1') as doc:
-                content = doc.read()
-                files = content.split('\n')
-                for file in files:
-                    yield self.tokenizer(file), label
+        if os.path.exists(dir_name):
+            for file_name in os.listdir(dir_name):
+                with open(os.path.join(dir_name, file_name), "r") as doc:
+                    content = doc.read()
+                    yield content
+
+    def stream_documents(self, label, path, file_names):
+        """Iterate over documents in the given path.
+
+        Documents are represented as strings.
+
+        """
+
+        if os.path.exists(path):
+            for file_name in file_names:
+                with open(os.path.join(path, file_name), "r") as doc:
+                    content = doc.read()
+                    yield self.tokenizer(content), label
 
     def __iter__(self):
-        dir_name = self.PATH_TO_SUBJECTIVITY_DATA_OBJECTIVE
+        dir_name = os.path.join(self.PATH_TO_POLARITY_DATA, self.POS_LABEL)
 
-        for file in self.stream_subjectivity_documents(dir_name):
+        for file in self.stream_polarity_documents(dir_name):
             yield self.tokenizer(file)
 
-        dir_name = self.PATH_TO_SUBJECTIVITY_DATA_SUBJECTIVE
-        for file in self.stream_subjectivity_documents(dir_name):
+        dir_name = os.path.join(self.PATH_TO_POLARITY_DATA, self.NEG_LABEL)
+        for file in self.stream_polarity_documents(dir_name):
             yield self.tokenizer(file)
 
     def get_training_data(self):
 
-        X_objective_train_data = self.X_objective_data[:4000]
-        y_obj_train_labels = self.y_obj_labels[:4000]
+        X_pos_train_data = self.X_pos_data[:800]
+        y_pos_train_labels = self.y_pos_labels[:800]
 
-        X_subjective_train_data = self.X_subjective_data[:4000]
-        y_subj_train_labels = self.y_subj_labels[:4000]
+        X_neg_train_data = self.X_neg_data[:800]
+        y_neg_train_labels = self.y_neg_labels[:800]
 
-        return X_objective_train_data + X_subjective_train_data, y_obj_train_labels + y_subj_train_labels
+        return X_pos_train_data + X_neg_train_data, y_pos_train_labels + y_neg_train_labels
 
     def get_test_data(self):
-        X_objective_test_data = self.X_objective_data[4000:]
-        y_obj_test_labels = self.y_obj_labels[4000:]
+        X_pos_test_data = self.X_pos_data[800:]
+        y_pos_test_labels = self.y_pos_labels[800:]
 
-        X_subjective_test_data = self.X_subjective_data[4000:]
-        y_subj_test_labels = self.y_subj_labels[4000:]
+        X_neg_test_data = self.X_neg_data[800:]
+        y_neg_test_labels = self.y_neg_labels[800:]
 
-        return X_objective_test_data + X_subjective_test_data, y_obj_test_labels + y_subj_test_labels
+        return X_pos_test_data + X_neg_test_data, y_pos_test_labels + y_neg_test_labels

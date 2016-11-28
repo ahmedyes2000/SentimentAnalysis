@@ -22,6 +22,7 @@ POS_LABEL = 'pos'
 NEG_LABEL = 'neg'
 K = 5
 
+
 def getSubjectivityDocuments(label, path):
     documents = []
     with open(path, "r", encoding='ISO-8859-1') as doc:
@@ -30,6 +31,7 @@ def getSubjectivityDocuments(label, path):
         for file in files:
             documents.append(file)
     return documents
+
 
 def stream_subjectivity_documents(data_path, label):
     """Iterate over documents of the Subjectivity dataset.
@@ -44,6 +46,7 @@ def stream_subjectivity_documents(data_path, label):
             files = content.split('\n')
             for file in files:
                 yield file, label
+
 
 def stream_documents(label, path, file_names):
     """Iterate over documents in the given path.
@@ -66,8 +69,9 @@ def kFoldCrossValidate(k, classifier, training_set: np.array):
         training_data, test_data = training_set[train_index], training_set[test_index]
         classifier.train_model(training_data.tolist())
 
+
 def evaluateReviewPolarity(k, tokenizer: Tokenizer, alphas):
-    count_vectorizer = CountVectorizer(tokenizer = tokenizer)
+    count_vectorizer = CountVectorizer(tokenizer=tokenizer)
 
     pos_path = os.path.join(PATH_TO_POLARITY_DATA, POS_LABEL)
     neg_path = os.path.join(PATH_TO_POLARITY_DATA, NEG_LABEL)
@@ -105,8 +109,9 @@ def evaluateReviewPolarity(k, tokenizer: Tokenizer, alphas):
         accuracies.append(score)
     return accuracies
 
+
 def evaluateIMDB(k, tokenizer: Tokenizer, alphas):
-    count_vectorizer = CountVectorizer(tokenizer = tokenizer)
+    count_vectorizer = CountVectorizer(tokenizer=tokenizer)
 
     train_pos_path = os.path.join(PATH_TO_IMDB_TRAIN_DATA, POS_LABEL)
     train_neg_path = os.path.join(PATH_TO_IMDB_TRAIN_DATA, NEG_LABEL)
@@ -116,7 +121,6 @@ def evaluateIMDB(k, tokenizer: Tokenizer, alphas):
 
     X_pos_train_data, y_pos_train_labels = zip(*train_pos_data_stream)
     X_neg_train_data, y_neg_train_labels = zip(*train_neg_data_stream)
-
 
     test_pos_path = os.path.join(PATH_TO_IMDB_TEST_DATA, POS_LABEL)
     test_neg_path = os.path.join(PATH_TO_IMDB_TEST_DATA, NEG_LABEL)
@@ -141,8 +145,9 @@ def evaluateIMDB(k, tokenizer: Tokenizer, alphas):
         accuracies.append(score)
     return accuracies
 
+
 def evaluateSubjectivity(k, tokenizer: Tokenizer, alphas):
-    count_vectorizer = CountVectorizer(tokenizer = tokenizer)
+    count_vectorizer = CountVectorizer(tokenizer=tokenizer)
     objective_data_stream = stream_subjectivity_documents(PATH_TO_SUBJECTIVITY_DATA_OBJECTIVE, Labels.strong_pos)
     subjective_data_stream = stream_subjectivity_documents(PATH_TO_SUBJECTIVITY_DATA_SUBJECTIVE, Labels.strong_neg)
 
@@ -175,6 +180,7 @@ def evaluateSubjectivity(k, tokenizer: Tokenizer, alphas):
         accuracies.append(score)
     return accuracies
 
+
 alphas = [1, 5, 10, 15, 20, 25, 30, 35]
 tokenizer = AdvancedTokenizer()
 review_polarity_accuracies = evaluateReviewPolarity(K, tokenizer, alphas)
@@ -184,4 +190,5 @@ subjectivity_accuracies = evaluateSubjectivity(K, tokenizer, alphas)
 # reviewPolarityAccuracies = [0.81, 0.83, 0.835, 0.8475, 0.8475, 0.85, 0.85, 0.845]
 # imdbAccuracies = [0.82312, 0.83088, 0.83392, 0.83532, 0.83532, 0.83576, 0.83628, 0.83652]
 # subjectivityAccuracies = [0.916083916, 0.919080919, 0.919080919, 0.918081918, 0.914585415, 0.911588412, 0.90959041, 0.908591409]
-printTable("Bernoulli NB Classifier", "Advanced Tokenizer", alphas, review_polarity_accuracies, imdb_accuracies, subjectivity_accuracies)
+printTable("Bernoulli NB Classifier", "Advanced Tokenizer", alphas, review_polarity_accuracies, imdb_accuracies,
+           subjectivity_accuracies)
