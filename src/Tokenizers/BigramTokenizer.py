@@ -1,8 +1,9 @@
 from collections import defaultdict
 
 import nltk
+
 from src.Document import Document
-from src.Tokenizer import Tokenizer
+from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class BigramTokenizer(Tokenizer):

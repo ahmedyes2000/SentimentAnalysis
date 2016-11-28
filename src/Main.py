@@ -1,16 +1,13 @@
-import codecs
 import os
 
-from src.AdvancedTokenizer import AdvancedTokenizer
-from src.BigramTokenizer import BigramTokenizer
-from src.FileDocument import FileDocument
-from src.Labels import Labels
-from src.NaiveBayesClassifier import NaiveBayesClassifier
-from src.SentenceDocument import SentenceDocument
-from src.Tokenizer import Tokenizer
-from src.SimpleTokenizer import SimpleTokenizer
 import numpy as np
 from sklearn.model_selection import KFold
+
+from src.Classifiers.NaiveBayesClassifier import NaiveBayesClassifier
+from src.Document.FileDocument import FileDocument
+from src.Document.SentenceDocument import SentenceDocument
+from src.Labels import Labels
+from src.Tokenizers.Tokenizer import Tokenizer
 
 # Path to dataset
 PATH_TO_POLARITY_DATA = '../../Datasets/review_polarity/txt_sentoken/'

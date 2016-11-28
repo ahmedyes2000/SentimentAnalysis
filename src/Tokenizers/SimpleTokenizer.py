@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 from src.Document import Document
-from src.Tokenizer import Tokenizer
+from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class SimpleTokenizer(Tokenizer):

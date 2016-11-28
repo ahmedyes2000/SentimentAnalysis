@@ -1,13 +1,13 @@
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-import numpy as np
-from sklearn.model_selection import KFold
-
-from src.AdvancedTokenizer import AdvancedTokenizer
-from src.Tokenizer import Tokenizer
-from src.Labels import Labels
-
-from sklearn.naive_bayes import MultinomialNB
 import os
+
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.model_selection import KFold
+from sklearn.naive_bayes import MultinomialNB
+
+from src.Labels import Labels
+from src.Tokenizers.AdvancedTokenizer import AdvancedTokenizer
+from src.Tokenizers.Tokenizer import Tokenizer
 
 # Path to dataset
 PATH_TO_POLARITY_DATA = '../../Datasets/review_polarity/txt_sentoken/'

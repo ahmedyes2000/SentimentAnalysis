@@ -2,9 +2,9 @@ import unittest
 from collections import defaultdict
 from unittest.mock import Mock
 
-import src.NaiveBayesClassifier
+import src.Classifiers.NaiveBayesClassifier
 from src.Labels import Labels
-from src.SimpleTokenizer import SimpleTokenizer
+from src.Tokenizers.SimpleTokenizer import SimpleTokenizer
 
 
 class NaiveBayesClassifierTests(unittest.TestCase):
@@ -12,7 +12,7 @@ class NaiveBayesClassifierTests(unittest.TestCase):
     def setUp(self):
         self.alpha = 0.65
         self.tokenizer = SimpleTokenizer()
-        self.nb = src.NaiveBayesClassifier.NaiveBayesClassifier(self.tokenizer)
+        self.nb = src.Classifiers.NaiveBayesClassifier.NaiveBayesClassifier(self.tokenizer)
 
     def test_init(self):
         self.assertEqual(self.nb.vocabulary, set())

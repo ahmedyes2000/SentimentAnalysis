@@ -1,14 +1,13 @@
 """
 
 """
-from collections import defaultdict
-
 import math
+from collections import defaultdict
 from operator import itemgetter
 
 from src.Document import Document
 from src.Labels import Labels
-from src.Tokenizer import Tokenizer
+from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class NaiveBayesClassifier():

@@ -1,4 +1,3 @@
-from gensim import corpora
 import os
 
 from src.Labels import Labels

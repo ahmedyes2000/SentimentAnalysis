@@ -1,10 +1,9 @@
-from gensim.models import Word2Vec
-
-from src.AdvancedTokenizer import AdvancedTokenizer
-from src.SubjectivityCorpus import SubjectivityCorpus
-
 import numpy as np
+from gensim.models import Word2Vec
 from sklearn.svm import SVC
+
+from src.Corpus.SubjectivityCorpus import SubjectivityCorpus
+from src.Tokenizers.AdvancedTokenizer import AdvancedTokenizer
 
 tokenizer = AdvancedTokenizer()
 

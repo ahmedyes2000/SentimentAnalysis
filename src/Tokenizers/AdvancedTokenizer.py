@@ -1,10 +1,11 @@
+import re
 from collections import defaultdict
 
-import re
 import nltk
 from nltk.corpus import stopwords
+
 from src.Document import Document
-from src.Tokenizer import Tokenizer
+from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class AdvancedTokenizer(Tokenizer):
