@@ -6,11 +6,19 @@ from src.Tokenizers.Tokenizer import Tokenizer
 
 class SimpleTokenizer(Tokenizer):
 
+    def __call__(self, doc):
+        return self.tokenize_content(doc)
+
+    def tokenize_content(self, content):
+        tokens = content.split()
+        lowered_tokens = map(lambda t: t.lower(), tokens)
+        return lowered_tokens
+
+
     def tokenize(self, document: Document):
         bow = defaultdict(float)
         content = document.getContent()
-        tokens = content.split()
-        lowered_tokens = map(lambda t: t.lower(), tokens)
+        lowered_tokens = self.tokenize_content(content)
         for token in lowered_tokens:
             bow[token] += 1.0
         return bow

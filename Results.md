@@ -77,3 +77,18 @@
 ![Advanced Tokenizer Accuracy]
 (/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
 
+# Word2Vec Representation
+## Support Vector Classification
+### Simple Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.0 | 0.0 | 0.0 |
+| 1000 | 0.0 | 0.0 | 0.0 |
+| 10000 | 0.0 | 0 | 0 |
+
+### Advanced Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.505 | 0.5038 | 0.521478521479 |
+| 1000 | 0.5625 | 0.53692 | 0.509490509491 |
+| 10000 | 0.62 | 0 | 0.502997002997 |
