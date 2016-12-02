@@ -1,5 +1,9 @@
+from random import shuffle
+
 import numpy as np
+from gensim.models import Doc2Vec
 from gensim.models import Word2Vec
+from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 
 from src.Corpus.ImdbCorpus import ImdbCorpus
@@ -34,16 +38,22 @@ def evaluate(corpus, number_of_features, classifier):
     Function to measure the accuracy of a classifier on the imdb data set.
     :return: the accuracy calculated by the classifier
     '''
-    model = Word2Vec(corpus, min_count=1, size=number_of_features, workers=4)
+    model = Doc2Vec(min_count=1, window=10, size=number_of_features, sample=1e-4, negative=5, workers=7)
 
-    X_train_files, y_train_labels = corpus.get_training_data()
-    X_test_files, y_test_labels = corpus.get_test_data()
+    sentences_list = corpus.to_array()
+    model.build_vocab(sentences_list)
 
-    X_train_data = file_to_vector(X_train_files, model, number_of_features)
-    X_test_data = file_to_vector(X_test_files, model, number_of_features)
+    Idx = list(range(len(sentences_list)))
+    for epoch in range(10):
+        shuffle(Idx)
+        perm_sentences = [sentences_list[i] for i in Idx]
+        model.train(perm_sentences)
 
-    classifier.fit(X_train_data, y_train_labels)
-    score = classifier.score(X_test_data, y_test_labels)
+    X_train_files, y_train_labels = corpus.get_training_documents(model)
+    X_test_files, y_test_labels = corpus.get_testing_documents(model)
+
+    classifier.fit(X_train_files, y_train_labels)
+    score = classifier.score(X_test_files, y_test_labels)
     return score
 
 def examine_model(corpus, number_of_features):
@@ -54,18 +64,18 @@ def examine_model(corpus, number_of_features):
 import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-classifier = SVC()
+classifier = LogisticRegression()
 number_of_features = 100
 tokenizer = AdvancedTokenizer()
 # tokenizer = SimpleTokenizer()
 
 # corpus = ReviewPolarityCorpus(tokenizer)
 # corpus = ImdbCorpus(tokenizer)
-# corpus = SubjectivityCorpus(tokenizer)
+corpus = SubjectivityCorpus(tokenizer)
 
 # review_polarity_accuracy = evaluate_review_polarity()
 # imdb_accuracy = evaluate(corpus, number_of_features, classifier)
-# subjectivity_accuracy = evaluate_subjectivity()
-# print(imdb_accuracy)
+subjectivity_accuracy = evaluate(corpus, number_of_features, classifier)
+print(subjectivity_accuracy)
 
 # examine_model(corpus, number_of_features)

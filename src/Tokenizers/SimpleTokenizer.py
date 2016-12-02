@@ -12,7 +12,7 @@ class SimpleTokenizer(Tokenizer):
     def tokenize_content(self, content):
         tokens = content.split()
         lowered_tokens = map(lambda t: t.lower(), tokens)
-        return lowered_tokens
+        return list(lowered_tokens)
 
 
     def tokenize(self, document: Document):
