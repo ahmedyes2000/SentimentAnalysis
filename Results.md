@@ -97,10 +97,10 @@ Words similar to great: [('time', 0.9997875690460205), ('film', 0.99976491928100
 words similar to bad: [('movie', 0.9997878670692444), ('film', 0.9997793436050415), ('nt', 0.9997758865356445), ('much', 0.9997627139091492), ('like', 0.9997615814208984), ('make', 0.9997614026069641), ('would', 0.9997589588165283), ('world', 0.9997525215148926), ('good', 0.9997518062591553), ('one', 0.9997491836547852)]
 
 # Doc2Vec Representation
-## Support Vector Classification
+## Logistic Regression Classification
 ### Advanced Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
-| 100 | 0 | 0| 0.856 |
+| 100 | 0.8275 | 0| 0.8625 |
 | 1000 | 0| 0 | 0 |
 | 10000 | 0 | 0 | 0 |

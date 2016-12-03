@@ -101,8 +101,8 @@ class SubjectivityCorpus(object):
         test_labels = np.zeros(number_of_testing_documents)
 
         for i in range(mid_way):
-            prefix_train_pos = 'strong_pos_' + str(400 + i)
-            prefix_train_neg = 'strong_neg_' + str(4000+ i)
+            prefix_train_pos = 'strong_pos_' + str(4000 + i)
+            prefix_train_neg = 'strong_neg_' + str(4000 + i)
             test_arrays[i] = model.docvecs[prefix_train_pos]
             test_arrays[mid_way + i] = model.docvecs[prefix_train_neg]
             test_labels[i] = Labels.strong_pos

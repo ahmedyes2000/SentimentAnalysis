@@ -69,9 +69,9 @@ number_of_features = 100
 tokenizer = AdvancedTokenizer()
 # tokenizer = SimpleTokenizer()
 
-# corpus = ReviewPolarityCorpus(tokenizer)
+corpus = ReviewPolarityCorpus(tokenizer)
 # corpus = ImdbCorpus(tokenizer)
-corpus = SubjectivityCorpus(tokenizer)
+# corpus = SubjectivityCorpus(tokenizer)
 
 # review_polarity_accuracy = evaluate_review_polarity()
 # imdb_accuracy = evaluate(corpus, number_of_features, classifier)

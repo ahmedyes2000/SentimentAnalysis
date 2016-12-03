@@ -1,6 +1,11 @@
 import os
 
+import gensim
+from gensim.models.doc2vec import TaggedDocument
+
 from src.Labels import Labels
+
+import numpy as np
 
 
 class ReviewPolarityCorpus(object):
@@ -48,7 +53,6 @@ class ReviewPolarityCorpus(object):
 
     def __iter__(self):
         dir_name = os.path.join(self.PATH_TO_POLARITY_DATA, self.POS_LABEL)
-
         for file in self.stream_polarity_documents(dir_name):
             yield self.tokenizer(file)
 
@@ -66,6 +70,22 @@ class ReviewPolarityCorpus(object):
 
         return X_pos_train_data + X_neg_train_data, y_pos_train_labels + y_neg_train_labels
 
+    def get_training_documents(self, model = gensim.models.Doc2Vec):
+        number_of_training_documents = 1600
+        mid_way = 800
+        train_arrays = np.zeros((number_of_training_documents, model.vector_size))
+        train_labels = np.zeros(number_of_training_documents)
+
+        for i in range(mid_way):
+            prefix_train_pos = 'strong_pos_' + str(i)
+            prefix_train_neg = 'strong_neg_' + str(i)
+            train_arrays[i] = model.docvecs[prefix_train_pos]
+            train_arrays[mid_way + i] = model.docvecs[prefix_train_neg]
+            train_labels[i] = Labels.strong_pos
+            train_labels[mid_way + i] = Labels.strong_neg
+
+        return train_arrays, train_labels
+
     def get_test_data(self):
         X_pos_test_data = self.X_pos_data[800:]
         y_pos_test_labels = self.y_pos_labels[800:]
@@ -74,3 +94,35 @@ class ReviewPolarityCorpus(object):
         y_neg_test_labels = self.y_neg_labels[800:]
 
         return X_pos_test_data + X_neg_test_data, y_pos_test_labels + y_neg_test_labels
+
+    def get_testing_documents(self, model = gensim.models.Doc2Vec):
+        number_of_testing_documents = 400
+        mid_way = 200
+        test_arrays = np.zeros((number_of_testing_documents, model.vector_size))
+        test_labels = np.zeros(number_of_testing_documents)
+
+        for i in range(mid_way):
+            prefix_train_pos = 'strong_pos_' + str(800 + i)
+            prefix_train_neg = 'strong_neg_' + str(800 + i)
+            test_arrays[i] = model.docvecs[prefix_train_pos]
+            test_arrays[mid_way + i] = model.docvecs[prefix_train_neg]
+            test_labels[i] = Labels.strong_pos
+            test_labels[mid_way + i] = Labels.strong_neg
+
+        return test_arrays, test_labels
+
+    def to_array(self):
+        self.sentences = []
+
+        dir_name = os.path.join(self.PATH_TO_POLARITY_DATA, self.POS_LABEL)
+        for idx, file in enumerate(self.stream_polarity_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['strong_pos_%s' % idx]))
+
+        dir_name = os.path.join(self.PATH_TO_POLARITY_DATA, self.NEG_LABEL)
+        for idx, file in enumerate(self.stream_polarity_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['strong_neg_%s' % idx]))
+
+        return self.sentences
+
+    def sentences_perm(self):
+        return np.random.permutation(self.sentences).tolist()
