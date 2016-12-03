@@ -98,9 +98,16 @@ words similar to bad: [('movie', 0.9997878670692444), ('film', 0.999779343605041
 
 # Doc2Vec Representation
 ## Logistic Regression Classification
+### Simple Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.865 | 0| 0.89 |
+| 1000 | 0.845| 0 | 0.8885 |
+| 10000 | 0 | 0 | 0.0 |
+
 ### Advanced Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
 | 100 | 0.8275 | 0| 0.8625 |
-| 1000 | 0| 0 | 0 |
-| 10000 | 0 | 0 | 0 |
+| 1000 | 0.85| 0 | 0.8705 |
+| 10000 | 0 | 0 | 0.856 |

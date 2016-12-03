@@ -65,17 +65,15 @@ import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 classifier = LogisticRegression()
-number_of_features = 100
-tokenizer = AdvancedTokenizer()
-# tokenizer = SimpleTokenizer()
+number_of_features = 1000
+# tokenizer = AdvancedTokenizer()
+tokenizer = SimpleTokenizer()
 
-corpus = ReviewPolarityCorpus(tokenizer)
+# corpus = ReviewPolarityCorpus(tokenizer)
 # corpus = ImdbCorpus(tokenizer)
-# corpus = SubjectivityCorpus(tokenizer)
+corpus = SubjectivityCorpus(tokenizer)
 
-# review_polarity_accuracy = evaluate_review_polarity()
-# imdb_accuracy = evaluate(corpus, number_of_features, classifier)
-subjectivity_accuracy = evaluate(corpus, number_of_features, classifier)
-print(subjectivity_accuracy)
+accuracy = evaluate(corpus, number_of_features, classifier)
+print(accuracy)
 
 # examine_model(corpus, number_of_features)
