@@ -1,7 +1,11 @@
 import os
 
+import gensim
+from gensim.models.doc2vec import TaggedDocument
+
 from src.Labels import Labels
 
+import numpy as np
 
 class ImdbCorpus(object):
     PATH_TO_IMDB_TEST_DATA = '../../Datasets/aclImdb/test/'
@@ -71,6 +75,29 @@ class ImdbCorpus(object):
 
         return X_pos_data + X_neg_data, y_pos_labels + y_neg_labels
 
+    def get_training_documents(self, model = gensim.models.Doc2Vec):
+        pos_dir_name = os.path.join(self.PATH_TO_IMDB_TRAIN_DATA, self.POS_LABEL)
+        neg_dir_name = os.path.join(self.PATH_TO_IMDB_TRAIN_DATA, self.NEG_LABEL)
+
+        number_of_pos_training_documents = len(os.listdir(pos_dir_name))
+        number_of_neg_training_documents = len(os.listdir(neg_dir_name))
+        total_training_documents = number_of_pos_training_documents + number_of_neg_training_documents
+
+        train_arrays = np.zeros((total_training_documents, model.vector_size))
+        train_labels = np.zeros(total_training_documents)
+
+        for i in range(number_of_pos_training_documents):
+            prefix_test_pos = 'train_pos_' + str(i)
+            train_arrays[i] = model.docvecs[prefix_test_pos]
+            train_labels[i] = Labels.strong_pos
+
+        for i in range(number_of_neg_training_documents):
+            prefix_test_neg = 'train_neg_' + str(i)
+            train_arrays[number_of_pos_training_documents + i] = model.docvecs[prefix_test_neg]
+            train_labels[number_of_pos_training_documents + i] = Labels.strong_neg
+
+        return train_arrays, train_labels
+
     def get_test_data(self):
         pos_path = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.POS_LABEL)
         neg_path = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.NEG_LABEL)
@@ -83,3 +110,52 @@ class ImdbCorpus(object):
 
 
         return X_pos_data + X_neg_data, y_pos_labels + y_neg_labels
+
+    def get_testing_documents(self, model = gensim.models.Doc2Vec):
+
+        pos_dir_name = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.POS_LABEL)
+        neg_dir_name = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.NEG_LABEL)
+
+        number_of_pos_testing_documents = len(os.listdir(pos_dir_name))
+        number_of_neg_testing_documents = len(os.listdir(neg_dir_name))
+        total_testing_documents = number_of_pos_testing_documents + number_of_neg_testing_documents
+
+        test_arrays = np.zeros((total_testing_documents, model.vector_size))
+        test_labels = np.zeros(total_testing_documents)
+
+        for i in range(number_of_pos_testing_documents):
+            prefix_test_pos = 'test_pos_' + str(i)
+            test_arrays[i] = model.docvecs[prefix_test_pos]
+            test_labels[i] = Labels.strong_pos
+
+        for i in range(number_of_neg_testing_documents):
+            prefix_test_neg = 'test_neg_' + str(i)
+            test_arrays[number_of_pos_testing_documents + i] = model.docvecs[prefix_test_neg]
+            test_labels[number_of_pos_testing_documents + i] = Labels.strong_neg
+
+
+        return test_arrays, test_labels
+
+    def to_array(self):
+        self.sentences = []
+
+        dir_name = os.path.join(self.PATH_TO_IMDB_TRAIN_DATA, self.POS_LABEL)
+        for idx, file in enumerate(self.stream_imdb_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['train_pos_%s' % idx]))
+
+        dir_name = os.path.join(self.PATH_TO_IMDB_TRAIN_DATA, self.NEG_LABEL)
+        for idx, file in enumerate(self.stream_imdb_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['train_neg_%s' % idx]))
+
+        dir_name = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.POS_LABEL)
+        for idx, file in enumerate(self.stream_imdb_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['test_pos_%s' % idx]))
+
+        dir_name = os.path.join(self.PATH_TO_IMDB_TEST_DATA, self.NEG_LABEL)
+        for idx, file in enumerate(self.stream_imdb_documents(dir_name)):
+            self.sentences.append(TaggedDocument(self.tokenizer(file), ['test_neg_%s' % idx]))
+
+        return self.sentences
+
+    def sentences_perm(self):
+        return np.random.permutation(self.sentences).tolist()
