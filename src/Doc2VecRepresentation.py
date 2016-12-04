@@ -89,8 +89,8 @@ number_of_features = 100
 tokenizer = AdvancedTokenizer()
 # tokenizer = BigramTokenizer()
 
-corpus = ReviewPolarityCorpus(tokenizer)
-# corpus = ImdbCorpus(tokenizer)
+# corpus = ReviewPolarityCorpus(tokenizer)
+corpus = ImdbCorpus(tokenizer)
 # corpus = SubjectivityCorpus(tokenizer)
 
 model = get_model(corpus, number_of_features)
