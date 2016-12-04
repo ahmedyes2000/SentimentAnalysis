@@ -82,7 +82,7 @@ def examine_model(corpus: Corpus, number_of_features):
 
 
 # classifier = LogisticRegression()
-classifier = KNeighborsClassifier(n_neighbors=5)
+classifier = KNeighborsClassifier(n_neighbors=10)
 
 number_of_features = 100
 # tokenizer = SimpleTokenizer()
