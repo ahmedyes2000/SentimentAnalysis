@@ -114,7 +114,7 @@ words similar to bad: [('movie', 0.9997878670692444), ('film', 0.999779343605041
 ### Simple Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
-| 100 | 0.7425 | 0.0.8356 | 0.8115 |
+| 100 | 0.7425 | 0.8356 | 0.8115 |
 | 1000 | 0.0| 0 | 0.0 |
 
 ### Advanced Tokenizer
