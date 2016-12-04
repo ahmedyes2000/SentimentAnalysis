@@ -5,7 +5,7 @@ import math
 from collections import defaultdict
 from operator import itemgetter
 
-from src.Document import Document
+from src.Documents import Document
 from src.Labels import Labels
 from src.Tokenizers.Tokenizer import Tokenizer
 

@@ -4,11 +4,15 @@ from collections import defaultdict
 import nltk
 from nltk.corpus import stopwords
 
-from src.Document import Document
+from src.Documents import Document
 from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class AdvancedTokenizer(Tokenizer):
+    @property
+    def name(self):
+        return 'AdvancedTokenizer'
+
     def __init__(self):
         self.tokenizer = nltk.tokenize.TreebankWordTokenizer()
         self.stopWords = set(stopwords.words('english'))

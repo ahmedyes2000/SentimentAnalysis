@@ -1,6 +1,4 @@
-import os
-
-from src.Document import Document
+from src.Documents import Document
 
 
 class SentenceDocument(Document):

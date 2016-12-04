@@ -3,14 +3,19 @@ import os
 import gensim
 from gensim.models.doc2vec import TaggedDocument
 
+from src.Corpus.Corpus import Corpus
 from src.Labels import Labels
 
 import numpy as np
 
 
-class SubjectivityCorpus(object):
+class SubjectivityCorpus(Corpus):
     PATH_TO_SUBJECTIVITY_DATA_SUBJECTIVE = '../../Datasets/rotten_imdb/quote.tok.gt9.5000'
     PATH_TO_SUBJECTIVITY_DATA_OBJECTIVE = '../../Datasets/rotten_imdb/plot.tok.gt9.5000'
+
+    @property
+    def name(self):
+        return 'Subjectivity'
 
     def __init__(self, tokenizer):
         self.tokenizer = tokenizer

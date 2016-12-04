@@ -4,8 +4,8 @@ import numpy as np
 from sklearn.model_selection import KFold
 
 from src.Classifiers.NaiveBayesClassifier import NaiveBayesClassifier
-from src.Document.FileDocument import FileDocument
-from src.Document.SentenceDocument import SentenceDocument
+from src.Documents.FileDocument import FileDocument
+from src.Documents.SentenceDocument import SentenceDocument
 from src.Labels import Labels
 from src.Tokenizers.Tokenizer import Tokenizer
 

@@ -1,10 +1,13 @@
 from collections import defaultdict
 
-from src.Document import Document
+from src.Documents import Document
 from src.Tokenizers.Tokenizer import Tokenizer
 
 
 class SimpleTokenizer(Tokenizer):
+    @property
+    def name(self):
+        return 'SimpleTokenizer'
 
     def __call__(self, doc):
         return self.tokenize_content(doc)
@@ -22,3 +25,4 @@ class SimpleTokenizer(Tokenizer):
         for token in lowered_tokens:
             bow[token] += 1.0
         return bow
+

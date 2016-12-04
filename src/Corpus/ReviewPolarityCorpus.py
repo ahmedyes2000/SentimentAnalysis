@@ -3,15 +3,20 @@ import os
 import gensim
 from gensim.models.doc2vec import TaggedDocument
 
+from src.Corpus.Corpus import Corpus
 from src.Labels import Labels
 
 import numpy as np
 
 
-class ReviewPolarityCorpus(object):
+class ReviewPolarityCorpus(Corpus):
     PATH_TO_POLARITY_DATA = '../../Datasets/review_polarity/txt_sentoken/'
     POS_LABEL = 'pos'
     NEG_LABEL = 'neg'
+
+    @property
+    def name(self):
+        return 'Review_Polarity'
 
     def __init__(self, tokenizer):
         self.tokenizer = tokenizer
