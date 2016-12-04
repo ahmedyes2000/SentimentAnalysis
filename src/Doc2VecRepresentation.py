@@ -82,16 +82,16 @@ def examine_model(corpus: Corpus, number_of_features):
 
 
 # classifier = LogisticRegression()
-classifier = KNeighborsClassifier(n_neighbors=30)
+classifier = KNeighborsClassifier(n_neighbors=5)
 
 number_of_features = 100
-tokenizer = SimpleTokenizer()
-# tokenizer = AdvancedTokenizer()
+# tokenizer = SimpleTokenizer()
+tokenizer = AdvancedTokenizer()
 # tokenizer = BigramTokenizer()
 
 # corpus = ReviewPolarityCorpus(tokenizer)
-corpus = ImdbCorpus(tokenizer)
-# corpus = SubjectivityCorpus(tokenizer)
+# corpus = ImdbCorpus(tokenizer)
+corpus = SubjectivityCorpus(tokenizer)
 
 model = get_model(corpus, number_of_features)
 
