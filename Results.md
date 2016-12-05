@@ -110,6 +110,17 @@ words similar to bad: [('movie', 0.9997878670692444), ('film', 0.999779343605041
 | 100 | 0.8275 | 0.87452| 0.8625 |
 | 1000 | 0.85| 0 | 0.8705 |
 
+## SVC
+### Simple Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.8475 | 0.8706 | 0.894 |
+
+### Advanced Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.8 | 0.87564| 0.8495 |
+
 ## k-Nearest Neighbour Classification
 ### Simple Tokenizer
 | #Neighbours  | PL04 | IMDB Dataset | Subjectivity |

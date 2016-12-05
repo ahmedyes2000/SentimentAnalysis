@@ -85,7 +85,8 @@ def examine_model(corpus: Corpus, number_of_features):
 
 def run_experiment():
     # classifier = LogisticRegression()
-    classifier = KNeighborsClassifier(n_neighbors=50)
+    # classifier = KNeighborsClassifier(n_neighbors=50)
+    classifier = SVC()
 
     number_of_features = 100
     # tokenizer = SimpleTokenizer()
@@ -110,4 +111,4 @@ def plot_results():
     plot_accuracies("Doc2Vec", "K Nearest Neighbor", "Simple Tokenizer", "# of Neighbors",
                      hyper_parameters, review_accuracies, imdb_accuracies, subjectivity_accuracies)
 
-plot_results()
+run_experiment()
