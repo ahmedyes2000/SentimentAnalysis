@@ -8,6 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
+from src.Analyzer import plot_accuracies
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
 from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
 
@@ -30,7 +31,8 @@ def corpus_exists(corpus: Corpus, number_of_features):
 
 
 def save_model(model, corpus: Corpus, number_of_features):
-    subjectivity_corpus_file = "./Corpus/PreGenerated/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name, number_of_features)
+    subjectivity_corpus_file = "./Corpus/PreGenerated/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name,
+                                                                          number_of_features)
 
     model.save(subjectivity_corpus_file)
 
@@ -81,21 +83,31 @@ def examine_model(corpus: Corpus, number_of_features):
     print("words similar to bad:", model.similar_by_word("bad", 10))
 
 
-# classifier = LogisticRegression()
-classifier = KNeighborsClassifier(n_neighbors=50)
+def run_experiment():
+    # classifier = LogisticRegression()
+    classifier = KNeighborsClassifier(n_neighbors=50)
 
-number_of_features = 100
-# tokenizer = SimpleTokenizer()
-tokenizer = AdvancedTokenizer()
-# tokenizer = BigramTokenizer()
+    number_of_features = 100
+    # tokenizer = SimpleTokenizer()
+    tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
 
-# corpus = ReviewPolarityCorpus(tokenizer)
-corpus = ImdbCorpus(tokenizer)
-# corpus = SubjectivityCorpus(tokenizer)
+    # corpus = ReviewPolarityCorpus(tokenizer)
+    corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
 
-model = get_model(corpus, number_of_features)
+    model = get_model(corpus, number_of_features)
 
-accuracy = evaluate(model, corpus, number_of_features, classifier)
-print(accuracy)
+    accuracy = evaluate(model, corpus, number_of_features, classifier)
+    print(accuracy)
 
-# examine_model(corpus, number_of_features)
+
+def plot_results():
+    hyper_parameters = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+    review_accuracies = [0.6675, 0.6875, 0.7325, 0.725, 0.72, 0.71, 0.71, 0.6675, 0.715, 0.6875, 0.7175]
+    imdb_accuracies = [0.7238, 0.7928, 0.81356, 0.8278, 0.83316, 0.84308, 0.84464, 0.84884, 0.8488, 0.85236, 0.85172]
+    subjectivity_accuracies = [0.6325, 0.693, 0.71, 0.7275, 0.7425, 0.741, 0.75, 0.74, 0.7495, 0.747, 0.761]
+    plot_accuracies("Doc2Vec", "K Nearest Neighbor", "Advanced Tokenizer", "# of Neighbors",
+                     hyper_parameters, review_accuracies, imdb_accuracies, subjectivity_accuracies)
+
+plot_results()

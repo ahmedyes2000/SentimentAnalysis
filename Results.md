@@ -140,3 +140,5 @@ words similar to bad: [('movie', 0.9997878670692444), ('film', 0.999779343605041
 | 40 | 0.715 | 0.8488 | 0.7495 |
 | 45 | 0.6875| 0.85236 | 0.747 |
 | 50 | 0.7175 | 0.85172 | 0.761 |
+![Advanced Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
+(/results/Doc2Vec/K Nearest Neighbor/Advanced_Tokenizer_Accuracy.png)
