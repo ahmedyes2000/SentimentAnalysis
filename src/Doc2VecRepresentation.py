@@ -104,10 +104,10 @@ def run_experiment():
 
 def plot_results():
     hyper_parameters = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
-    review_accuracies = [0.6675, 0.6875, 0.7325, 0.725, 0.72, 0.71, 0.71, 0.6675, 0.715, 0.6875, 0.7175]
-    imdb_accuracies = [0.7238, 0.7928, 0.81356, 0.8278, 0.83316, 0.84308, 0.84464, 0.84884, 0.8488, 0.85236, 0.85172]
-    subjectivity_accuracies = [0.6325, 0.693, 0.71, 0.7275, 0.7425, 0.741, 0.75, 0.74, 0.7495, 0.747, 0.761]
-    plot_accuracies("Doc2Vec", "K Nearest Neighbor", "Advanced Tokenizer", "# of Neighbors",
+    review_accuracies = [0.69, 0.6975, 0.77, 0.73, 0.7575, 0.7225, 0.7425, 0.7175, 0.72, 0.69, 0.7125]
+    imdb_accuracies = [0.71748, 0.78584, 0.80204, 0.824, 0.82564, 0.83556, 0.8356, 0.84188, 0.84072, 0.8446, 0.8426]
+    subjectivity_accuracies = [0.645, 0.645, 0.751, 0.7815, 0.793, 0.798, 0.8115, 0.8095, 0.8245, 0.812, 0.819]
+    plot_accuracies("Doc2Vec", "K Nearest Neighbor", "Simple Tokenizer", "# of Neighbors",
                      hyper_parameters, review_accuracies, imdb_accuracies, subjectivity_accuracies)
 
 plot_results()

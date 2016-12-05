@@ -125,6 +125,8 @@ words similar to bad: [('movie', 0.9997878670692444), ('film', 0.999779343605041
 | 40 | 0.72 | 0.84072 | 0.8245 |
 | 45 | 0.69 | 0.8446 | 0.812 |
 | 50 | 0.7125 | 0.8426 | 0.819 |
+![Simple Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
+(/results/Doc2Vec/K Nearest Neighbor/Simple_Tokenizer_Accuracy.png)
 
 ### Advanced Tokenizer
 | #Neighbours  | PL04 | IMDB Dataset | Subjectivity |
