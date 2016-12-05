@@ -8,9 +8,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
-from src.Analyzer import plot_accuracies
+from src.Analyzer import plot_accuracies, plot_word_embeddings
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
+from src.Labels import Labels
 from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
+
+from sklearn.manifold import TSNE
 
 import logging
 
@@ -66,7 +69,10 @@ def evaluate(model, corpus: Corpus, number_of_features, classifier):
     Function to measure the accuracy of a classifier on the imdb data set.
     :return: the accuracy calculated by the classifier
     '''
+    logging.log(logging.INFO, "Getting training documents")
     X_train_files, y_train_labels = corpus.get_training_documents(model)
+
+    logging.log(logging.INFO, "Getting testing documents")
     X_test_files, y_test_labels = corpus.get_testing_documents(model)
 
     logging.log(logging.INFO, "Training classifier")
@@ -109,6 +115,29 @@ def plot_results():
     imdb_accuracies = [0.71748, 0.78584, 0.80204, 0.824, 0.82564, 0.83556, 0.8356, 0.84188, 0.84072, 0.8446, 0.8426]
     subjectivity_accuracies = [0.645, 0.645, 0.751, 0.7815, 0.793, 0.798, 0.8115, 0.8095, 0.8245, 0.812, 0.819]
     plot_accuracies("Doc2Vec", "K Nearest Neighbor", "Simple Tokenizer", "# of Neighbors",
-                     hyper_parameters, review_accuracies, imdb_accuracies, subjectivity_accuracies)
+                    hyper_parameters, review_accuracies, imdb_accuracies, subjectivity_accuracies)
 
-run_experiment()
+
+def visualize():
+    number_of_features = 100
+    tokenizer = SimpleTokenizer()
+    # tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
+
+    # corpus = ReviewPolarityCorpus(tokenizer)
+    corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
+
+    model = get_model(corpus, number_of_features)
+
+    logging.log(logging.INFO, "Getting training documents")
+    X_train_files, y_train_labels = corpus.get_training_documents(model)
+
+    model = TSNE(n_components=2, random_state=0)
+    np.set_printoptions(suppress=True)
+    X = model.fit_transform(X_train_files)
+
+    plot_word_embeddings("Doc2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
+
+
+visualize()
