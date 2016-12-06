@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Doc2Vec/PL04.png" afterPath="$PROJECT_DIR$/results/Doc2Vec/PL04.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Doc2Vec/Subjectivity.png" afterPath="$PROJECT_DIR$/results/Doc2Vec/Subjectivity.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Doc2VecRepresentation.py" afterPath="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results.md" afterPath="$PROJECT_DIR$/Results.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NeatPlots.py" afterPath="$PROJECT_DIR$/src/NeatPlots.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Word2VecRepresentation.py" afterPath="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,28 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Doc2VecRepresentation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Doc2VecRepresentation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#719#1116#0" expanded="false" />
-                <element signature="e#1182#1405#0" expanded="false" />
-                <element signature="e#1463#2259#0" expanded="false" />
-                <element signature="e#3031#3246#0" expanded="false" />
-                <element signature="e#3275#3798#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="120" column="47" lean-forward="false" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#636#1375#0" expanded="false" />
@@ -54,87 +37,22 @@
                 <element signature="e#2050#2806#0" expanded="false" />
                 <element signature="e#2571#2751#0" expanded="false" />
                 <element signature="e#2889#3109#0" expanded="false" />
-                <element signature="e#3994#4209#0" expanded="false" />
-                <element signature="e#4238#4901#0" expanded="false" />
+                <element signature="e#3185#3940#0" expanded="false" />
+                <element signature="e#5136#5872#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Subjectivity.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/Word2Vec/Subjectivity.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PL04.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/Word2Vec/PL04.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReviewPolarityCorpus.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="100" column="87" lean-forward="false" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
-              <folding>
-                <element signature="e#420#933#0" expanded="false" />
-                <element signature="e#994#1350#0" expanded="false" />
-                <element signature="e#1417#1764#0" expanded="false" />
-                <element signature="e#1798#2144#0" expanded="false" />
-                <element signature="e#3222#3503#0" expanded="false" />
-                <element signature="e#3581#4208#0" expanded="false" />
-                <element signature="e#4242#4796#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Analyzer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="82" column="42" lean-forward="false" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Results.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Results.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Results.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1815">
-                <caret line="121" column="53" lean-forward="false" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
+            <state split_layout="SECOND">
+              <first_editor relative-caret-position="440">
+                <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NeatPlots.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NeatPlots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#83#1599#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdvancedTokenizer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tokenizers/AdvancedTokenizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="21" column="8" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -197,16 +115,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tests/AnalyzerTests.py" />
         <option value="$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py" />
-        <option value="$PROJECT_DIR$/Results.md" />
-        <option value="$PROJECT_DIR$/src/NeatPlots.py" />
         <option value="$PROJECT_DIR$/src/Analyzer.py" />
-        <option value="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
         <option value="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
+        <option value="$PROJECT_DIR$/src/NeatPlots.py" />
+        <option value="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
+        <option value="$PROJECT_DIR$/Results.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="29" />
     <option name="width" value="1280" />
     <option name="height" value="717" />
   </component>
@@ -266,42 +184,6 @@
               <option name="myItemId" value="results" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Word2Vec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Doc2Vec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SentimentAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -327,7 +209,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Doc2Vec">
+  <component name="RunManager" selected="Python.Word2Vec">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -659,7 +541,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
+    <frame x="0" y="29" width="1280" height="717" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3884035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1005,14 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="3254" column="22" lean-forward="false" selection-start-line="3254" selection-start-column="22" selection-end-line="3254" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/colorbar.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -1053,21 +927,6 @@
         <state relative-caret-position="199">
           <caret line="1849" column="4" lean-forward="false" selection-start-line="1849" selection-start-column="4" selection-end-line="1849" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/gensim/models/word2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="529" column="8" lean-forward="false" selection-start-line="529" selection-start-column="8" selection-end-line="529" selection-end-column="8" />
-          <folding>
-            <element signature="e#14406#14593#1" expanded="false" />
-            <element signature="e#14636#14687#0" expanded="false" />
-            <element signature="e#14766#14797#0" expanded="false" />
-            <element signature="e#14830#15003#0" expanded="false" />
-            <element signature="e#86017#87203#0" expanded="false" />
-            <element signature="e#89158#92323#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,42 +1014,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tokenizers/AdvancedTokenizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1815">
-            <caret line="121" column="53" lean-forward="false" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NeatPlots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#83#1599#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -1207,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="82" column="42" lean-forward="false" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/Word2Vec/Subjectivity.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1223,24 +1038,6 @@
     <entry file="file://$PROJECT_DIR$/results/Word2Vec/PL04.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#636#1375#0" expanded="false" />
-            <element signature="e#1437#1906#0" expanded="false" />
-            <element signature="e#1964#2823#0" expanded="false" />
-            <element signature="e#2050#2806#0" expanded="false" />
-            <element signature="e#2571#2751#0" expanded="false" />
-            <element signature="e#2889#3109#0" expanded="false" />
-            <element signature="e#3994#4209#0" expanded="false" />
-            <element signature="e#4238#4901#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Doc2VecRepresentation.py">
@@ -1255,6 +1052,90 @@
             <element signature="e#3031#3246#0" expanded="false" />
             <element signature="e#3275#3798#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tokenizers/AdvancedTokenizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="3152" column="4" lean-forward="false" selection-start-line="3152" selection-start-column="4" selection-end-line="3152" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="82" column="42" lean-forward="false" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NeatPlots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/gensim/models/word2vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1491" column="8" lean-forward="false" selection-start-line="1491" selection-start-column="8" selection-end-line="1491" selection-end-column="8" />
+          <folding>
+            <element signature="e#14406#14593#1" expanded="false" />
+            <element signature="e#14636#14687#0" expanded="false" />
+            <element signature="e#14766#14797#0" expanded="false" />
+            <element signature="e#14830#15003#0" expanded="false" />
+            <element signature="e#86017#87203#0" expanded="false" />
+            <element signature="e#89158#92323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="120" column="47" lean-forward="false" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#636#1375#0" expanded="false" />
+            <element signature="e#1437#1906#0" expanded="false" />
+            <element signature="e#1964#2823#0" expanded="false" />
+            <element signature="e#2050#2806#0" expanded="false" />
+            <element signature="e#2571#2751#0" expanded="false" />
+            <element signature="e#2889#3109#0" expanded="false" />
+            <element signature="e#3185#3940#0" expanded="false" />
+            <element signature="e#5136#5872#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="440">
+            <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

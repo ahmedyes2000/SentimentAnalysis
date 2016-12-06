@@ -135,8 +135,35 @@
 ![Advanced Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
 (/results/Word2Vec/K Nearest Neighbor/Advanced_Tokenizer_Accuracy.png)
 
-Words similar to great: [('time', 0.9997875690460205), ('film', 0.9997649192810059), ('love', 0.999764621257782), ('get', 0.9997416734695435), ('one', 0.9997367262840271), ('story', 0.999735951423645), ('movie', 0.9997340440750122), ('world', 0.9997314214706421), ('best', 0.9997295141220093), ('little', 0.9997293949127197)]
-words similar to bad: [('movie', 0.9997878670692444), ('film', 0.9997793436050415), ('nt', 0.9997758865356445), ('much', 0.9997627139091492), ('like', 0.9997615814208984), ('make', 0.9997614026069641), ('would', 0.9997589588165283), ('world', 0.9997525215148926), ('good', 0.9997518062591553), ('one', 0.9997491836547852)]
+Top 10 Words similar to great:
+
+| Word  | Similarity Score |
+|---|:---:|
+| wonderful | 0.8136018514633179 |
+| good | 0.7258837819099426 |
+| fantastic | 0.7196279764175415 |
+| terrific | 0.6841671466827393 |
+| excellent | 0.67384892702102660 |
+| fine | 0.6657408475875854 |
+| superb | 0.6327412128448486 |
+| great, | 0.6117573380470276 |
+| fabulous | 0.6105859279632568 |
+| marvelous | 0.6080844402313232 |
+
+Top 10 Words similar to bad:
+
+| Word  | Similarity Score |
+|---|:---:|
+| terrible | 0.7424992322921753 |
+| bad. | 0.7385110855102539 |
+| bad, | 0.7382776141166687 |
+| horrible | 0.7221196889877319 |
+| lousy | 0.7122937440872192 |
+| awful | 0.6978504657745361 |
+| bad! | 0.6827770471572876 |
+| good | 0.6407232284545898 |
+| awful, | 0.633628785610199 |
+| crappy | 0.6150558590888977 |
 
 # Doc2Vec Representation
 ## Logistic Regression Classification

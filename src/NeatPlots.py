@@ -14,22 +14,22 @@ def line_plots(**kwargs):
     
     if 'ugrams' in keys_:
         ugrams=kwargs.pop('ugrams');
-        plt.plot(x,ugrams,color='0.25',linestyle='-',linewidth=2.0,label='ugram_counts,lsa');
+        plt.plot(x,ugrams,color='red',linestyle='-',linewidth=2.0,label='ugram_counts,lsa');
     if 'ugrams_pa' in keys_:
         ugrams_pa=kwargs.pop('ugrams_pa');
-        plt.plot(x,ugrams_pa,color='0.5',linestyle='--',linewidth=2.0,label='ugram_pa,lsa');
+        plt.plot(x,ugrams_pa,color='green',linestyle='--',linewidth=2.0,label='ugram_pa,lsa');
     if 'word2vec' in keys_:
         w2vec=kwargs.pop('word2vec');
-        plt.plot(x,w2vec,color='0.75',linestyle='-',linewidth=2.0,label='word2vec_avg,lsa');
+        plt.plot(x,w2vec,color='blue',linestyle='-.',linewidth=2.0,label='word2vec_avg,lsa');
     if 'bigrams' in keys_:
         bigrams=kwargs.pop('bigrams')
-        plt.plot(x,bigrams,color='1.0',linestyle='--',label='bigram_counts,lsa')
+        plt.plot(x,bigrams,color='orange',linestyle='-',label='bigram_counts,lsa')
     if 'gensim_w2v' in keys_:
         gensim_w2v=kwargs.pop('gensim_w2v')
-        plt.plot(x,gensim_w2v,color='0.2',linestyle='--',label='gensim_w2v')
+        plt.plot(x,gensim_w2v,color='black',linestyle='-.',label='gensim_w2v')
     if 'gensim_d2v' in keys_:
         gensim_w2v=kwargs.pop('gensim_d2v')
-        plt.plot(x,gensim_d2v,color='0.9',linestyle='--',label='gensim_doc2vec,lsa')
+        plt.plot(x,gensim_d2v,color='brown',linestyle='--',label='gensim_doc2vec,lsa')
     
     plt.legend(loc='upper right');
     plt.ylim(0,1.0);

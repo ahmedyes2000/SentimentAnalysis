@@ -107,8 +107,17 @@ def evaluate(model, corpus: Corpus, number_of_features, classifier):
     return score
 
 
-def examine_model(corpus, number_of_features):
-    model = Word2Vec(corpus, min_count=1, size=number_of_features, workers=4)
+def examine_model():
+    number_of_features = 100
+    tokenizer = SimpleTokenizer()
+    # tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
+
+    # corpus = ReviewPolarityCorpus(tokenizer)
+    corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
+
+    model = get_model(corpus, number_of_features)
     print("Words similar to great:", model.similar_by_word("great", 10))
     print("words similar to bad:", model.similar_by_word("bad", 10))
 
@@ -156,4 +165,5 @@ def visualize():
     plot_word_embeddings("Word2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
 
 
-visualize()
+# visualize()
+examine_model()
