@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Analyzer.py" afterPath="$PROJECT_DIR$/src/Analyzer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Word2VecRepresentation.py" afterPath="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Doc2Vec/PL04.png" afterPath="$PROJECT_DIR$/results/Doc2Vec/PL04.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Doc2Vec/Subjectivity.png" afterPath="$PROJECT_DIR$/results/Doc2Vec/Subjectivity.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Doc2VecRepresentation.py" afterPath="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Doc2VecRepresentation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Doc2VecRepresentation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Doc2VecRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="143" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+            <state relative-caret-position="283">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#719#1116#0" expanded="false" />
@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PL04.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PL04.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/results/Word2Vec/PL04.png">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -197,11 +197,11 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tests/AnalyzerTests.py" />
         <option value="$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py" />
-        <option value="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
         <option value="$PROJECT_DIR$/Results.md" />
         <option value="$PROJECT_DIR$/src/NeatPlots.py" />
         <option value="$PROJECT_DIR$/src/Analyzer.py" />
         <option value="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
+        <option value="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
       </list>
     </option>
   </component>
@@ -284,6 +284,24 @@
               <option name="myItemId" value="results" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doc2Vec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SentimentAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SentimentAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -309,7 +327,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Word2Vec">
+  <component name="RunManager" selected="Python.Doc2Vec">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1173,21 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Doc2VecRepresentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#719#1116#0" expanded="false" />
-            <element signature="e#1182#1405#0" expanded="false" />
-            <element signature="e#1463#2259#0" expanded="false" />
-            <element signature="e#3031#3246#0" expanded="false" />
-            <element signature="e#3275#3798#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -1212,6 +1215,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/Word2Vec/Subjectivity.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/Word2Vec/PL04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1230,14 +1243,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/Word2Vec/Subjectivity.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/Word2Vec/PL04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/Doc2VecRepresentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#719#1116#0" expanded="false" />
+            <element signature="e#1182#1405#0" expanded="false" />
+            <element signature="e#1463#2259#0" expanded="false" />
+            <element signature="e#3031#3246#0" expanded="false" />
+            <element signature="e#3275#3798#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
