@@ -4,9 +4,11 @@ from random import shuffle
 
 from gensim.models import Word2Vec
 from sklearn.linear_model import LogisticRegression
+from sklearn.manifold import TSNE
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
+from src.Analyzer import plot_word_embeddings
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
 from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
 
@@ -131,4 +133,27 @@ def run_experiment():
         accuracy = evaluate(model, corpus, number_of_features, classifier)
         print("Accuracy for {0} = {1}".format(i, accuracy))
 
-run_experiment()
+def visualize():
+    number_of_features = 100
+    tokenizer = SimpleTokenizer()
+    # tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
+
+    # corpus = ReviewPolarityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
+    corpus = SubjectivityCorpus(tokenizer)
+
+    model = get_model(corpus, number_of_features)
+
+    logging.log(logging.INFO, "Getting training documents")
+    X_train_files, y_train_labels = corpus.get_training_data()
+    X_train_data = file_to_vector(X_train_files, model, number_of_features)
+
+    model = TSNE(n_components=2, random_state=0)
+    np.set_printoptions(suppress=True)
+    X = model.fit_transform(X_train_data)
+
+    plot_word_embeddings("Word2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
+
+
+visualize()

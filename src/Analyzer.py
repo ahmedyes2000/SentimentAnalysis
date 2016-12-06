@@ -80,7 +80,7 @@ def plot_word_embeddings(representation_model_name, data_set_name, label_name_po
                ncol=2,
                fontsize=8, mode="expand", borderaxespad=0.)
     fig = plt.gcf()
-    fig.suptitle(data_set_name, fontsize=20, x=0.5, y= 0.040)
+    fig.suptitle("{0} representation - {1}".format(representation_model_name, data_set_name), fontsize=20, x=0.5, y= 0.040)
     plt.show()
     plt.draw()
     if not os.path.exists(results_dir):
