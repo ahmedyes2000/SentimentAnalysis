@@ -98,7 +98,42 @@
 ### Advanced Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
-| 100 | 0.0 | 0.0| 0.0 |
+| 100 | 0.5 | 0.5038| 0.877622377622 |
+
+## k-Nearest Neighbour Classification
+### Simple Tokenizer
+| #Neighbours  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 1 | 0.0 | 0.0 | 0.0 |
+| 5 | 0.0 | 0.0 | 0.0 |
+| 10 | 0.0 | 0.0 | 0.0 |
+| 15 | 0.0 | 0.0 | 0.0 |
+| 20 | 0.0 | 0.0 | 0.0 |
+| 25 | 0.0 | 0.0 | 0.0 |
+| 30 | 0.0 | 0.0 | 0.0 |
+| 35 | 0.0 | 0.0 | 0.0 |
+| 40 | 0.0 | 0.0 | 0.0 |
+| 45 | 0.0 | 0.0 | 0.0 |
+| 50 | 0.0 | 0.0 | 0.0 |
+![Simple Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
+(/results/Word2Vec/K Nearest Neighbor/Simple_Tokenizer_Accuracy.png)
+
+### Advanced Tokenizer
+| #Neighbours  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 1 | 0.0 | 0.0 | 0.0 |
+| 5 | 0.0 | 0.0 | 0.0 |
+| 10 | 0.0 | 0.0 | 0.0 |
+| 15 | 0.0 | 0.0 | 0.0 |
+| 20 | 0.0 | 0.0 | 0.0 |
+| 25 | 0.0 | 0.0 | 0.0 |
+| 30 | 0.0 | 0.0 | 0.0 |
+| 35 | 0.0 | 0.0 | 0.0 |
+| 40 | 0.0 | 0.0 | 0.0 |
+| 45 | 0.0 | 0.0 | 0.0 |
+| 50 | 0.0 | 0.0 | 0.0 |
+![Advanced Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
+(/results/Word2Vec/K Nearest Neighbor/Advanced_Tokenizer_Accuracy.png)
 
 Words similar to great: [('time', 0.9997875690460205), ('film', 0.9997649192810059), ('love', 0.999764621257782), ('get', 0.9997416734695435), ('one', 0.9997367262840271), ('story', 0.999735951423645), ('movie', 0.9997340440750122), ('world', 0.9997314214706421), ('best', 0.9997295141220093), ('little', 0.9997293949127197)]
 words similar to bad: [('movie', 0.9997878670692444), ('film', 0.9997793436050415), ('nt', 0.9997758865356445), ('much', 0.9997627139091492), ('like', 0.9997615814208984), ('make', 0.9997614026069641), ('would', 0.9997589588165283), ('world', 0.9997525215148926), ('good', 0.9997518062591553), ('one', 0.9997491836547852)]

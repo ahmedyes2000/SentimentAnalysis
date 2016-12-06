@@ -4,6 +4,7 @@ from random import shuffle
 
 from gensim.models import Word2Vec
 from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
@@ -112,8 +113,8 @@ def examine_model(corpus, number_of_features):
 
 def run_experiment():
     # classifier = LogisticRegression()
-    # classifier = KNeighborsClassifier(n_neighbors=50)
-    classifier = SVC()
+    classifier = KNeighborsClassifier(n_neighbors=1)
+    # classifier = SVC()
 
     number_of_features = 100
     tokenizer = SimpleTokenizer()
@@ -121,8 +122,8 @@ def run_experiment():
     # tokenizer = BigramTokenizer()
 
     # corpus = ReviewPolarityCorpus(tokenizer)
-    corpus = ImdbCorpus(tokenizer)
-    # corpus = SubjectivityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
+    corpus = SubjectivityCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
 
