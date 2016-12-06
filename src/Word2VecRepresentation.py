@@ -1,12 +1,17 @@
 import numpy as np
+import os
+from random import shuffle
+
 from gensim.models import Word2Vec
+from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 
-from src.Corpus.ImdbCorpus import ImdbCorpus
-from src.Corpus.ReviewPolarityCorpus import ReviewPolarityCorpus
-from src.Corpus.SubjectivityCorpus import SubjectivityCorpus
-from src.Tokenizers.AdvancedTokenizer import AdvancedTokenizer
-from src.Tokenizers.SimpleTokenizer import SimpleTokenizer
+from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
+from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
+
+import logging
+
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 def file_to_vector(files, model, number_of_features):
@@ -22,50 +27,106 @@ def file_to_vector(files, model, number_of_features):
     converted_files = []
 
     for train_file in files:
-        file_vector = np.zeros((number_of_features,),dtype="float32")
+        file_vector = np.zeros((number_of_features,), dtype="float32")
         for token in train_file:
             file_vector = np.add(file_vector, model[token])
         converted_files.append(file_vector)
 
     return converted_files
 
-def evaluate(corpus, number_of_features, classifier):
+
+def corpus_exists(corpus: Corpus, number_of_features):
+    is_corpus_available = False
+    model = None
+    corpus_file = "./Corpus/PreGenerated/Word2Vec/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name,
+                                                                      number_of_features)
+
+    if os.path.exists(corpus_file):
+        logging.log(logging.INFO, "{0} corpus exists".format(corpus.name))
+        is_corpus_available = True
+        model = Word2Vec.load(corpus_file)
+
+    return is_corpus_available, model
+
+
+def get_model(corpus: Corpus, number_of_features):
+    exists, model = corpus_exists(corpus, number_of_features)
+
+    if not exists:
+        logging.log(logging.INFO, "Creating Word2Vec model")
+        model = Word2Vec(min_count=1, window=10, size=number_of_features, sample=1e-4, negative=5, workers=7)
+
+        logging.log(logging.INFO, "fetching sentences list")
+        sentences_list = []
+        for sentence in corpus:
+            sentences_list.append(sentence)
+
+        logging.log(logging.INFO, "building vocabulary")
+        model.build_vocab(sentences_list)
+
+        Idx = list(range(len(sentences_list)))
+        for epoch in range(10):
+            logging.log(logging.INFO, "running epoch %s" % epoch)
+            shuffle(Idx)
+            perm_sentences = [sentences_list[i] for i in Idx]
+            model.train(perm_sentences)
+
+        save_model(model, corpus, number_of_features)
+    return model
+
+
+def save_model(model, corpus: Corpus, number_of_features):
+    corpus_file = "./Corpus/PreGenerated/Word2Vec/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name,
+                                                                      number_of_features)
+
+    model.save(corpus_file)
+
+
+def evaluate(model, corpus: Corpus, number_of_features, classifier):
     '''
-    Function to measure the accuracy of a classifier on the imdb data set.
+    Function to measure the accuracy of a classifier on the data set.
     :return: the accuracy calculated by the classifier
     '''
-    model = Word2Vec(corpus, min_count=1, size=number_of_features, workers=4)
-
+    logging.log(logging.INFO, "Getting training documents")
     X_train_files, y_train_labels = corpus.get_training_data()
+
+    logging.log(logging.INFO, "Getting testing documents")
     X_test_files, y_test_labels = corpus.get_test_data()
 
     X_train_data = file_to_vector(X_train_files, model, number_of_features)
     X_test_data = file_to_vector(X_test_files, model, number_of_features)
 
+    logging.log(logging.INFO, "Training classifier")
     classifier.fit(X_train_data, y_train_labels)
+
+    logging.log(logging.INFO, "Evaluating score")
     score = classifier.score(X_test_data, y_test_labels)
     return score
+
 
 def examine_model(corpus, number_of_features):
     model = Word2Vec(corpus, min_count=1, size=number_of_features, workers=4)
     print("Words similar to great:", model.similar_by_word("great", 10))
     print("words similar to bad:", model.similar_by_word("bad", 10))
 
-import logging
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-classifier = SVC()
-number_of_features = 100
-tokenizer = AdvancedTokenizer()
-# tokenizer = SimpleTokenizer()
+def run_experiment():
+    # classifier = LogisticRegression()
+    # classifier = KNeighborsClassifier(n_neighbors=50)
+    classifier = SVC()
 
-# corpus = ReviewPolarityCorpus(tokenizer)
-# corpus = ImdbCorpus(tokenizer)
-# corpus = SubjectivityCorpus(tokenizer)
+    number_of_features = 100
+    tokenizer = SimpleTokenizer()
+    # tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
 
-# review_polarity_accuracy = evaluate_review_polarity()
-# imdb_accuracy = evaluate(corpus, number_of_features, classifier)
-# subjectivity_accuracy = evaluate_subjectivity()
-# print(imdb_accuracy)
+    # corpus = ReviewPolarityCorpus(tokenizer)
+    corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
 
-# examine_model(corpus, number_of_features)
+    model = get_model(corpus, number_of_features)
+
+    accuracy = evaluate(model, corpus, number_of_features, classifier)
+    print(accuracy)
+
+run_experiment()

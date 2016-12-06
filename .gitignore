@@ -25,3 +25,7 @@ src/Corpus/PreGenerated/IMDB_AdvancedTokenizer_100.syn1.npy
 src/Corpus/PreGenerated/IMDB_AdvancedTokenizer_100.syn1neg.npy
 
 src/Corpus/PreGenerated/Review_Polarity_AdvancedTokenizer_100
+
+src/Corpus/PreGenerated/Word2Vec/Subjectivity_SimpleTokenizer_100
+
+src/Corpus/PreGenerated/Doc2Vec/IMDB_AdvancedTokenizer_100

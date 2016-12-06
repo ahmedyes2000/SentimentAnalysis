@@ -23,7 +23,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 def corpus_exists(corpus: Corpus, number_of_features):
     is_corpus_available = False
     model = None
-    corpus_file = "./Corpus/PreGenerated/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name, number_of_features)
+    corpus_file = "./Corpus/PreGenerated/Doc2Vec/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name, number_of_features)
 
     if os.path.exists(corpus_file):
         logging.log(logging.INFO, "{0} corpus exists".format(corpus.name))
@@ -34,10 +34,10 @@ def corpus_exists(corpus: Corpus, number_of_features):
 
 
 def save_model(model, corpus: Corpus, number_of_features):
-    subjectivity_corpus_file = "./Corpus/PreGenerated/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name,
+    corpus_file = "./Corpus/PreGenerated/Doc2Vec/{0}_{1}_{2}".format(corpus.name, corpus.tokenizer.name,
                                                                           number_of_features)
 
-    model.save(subjectivity_corpus_file)
+    model.save(corpus_file)
 
 
 def get_model(corpus: Corpus, number_of_features):
@@ -125,8 +125,8 @@ def visualize():
     # tokenizer = BigramTokenizer()
 
     # corpus = ReviewPolarityCorpus(tokenizer)
-    corpus = ImdbCorpus(tokenizer)
-    # corpus = SubjectivityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
+    corpus = SubjectivityCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
 

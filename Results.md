@@ -78,20 +78,27 @@
 (/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
 
 # Word2Vec Representation
-## Support Vector Classification
+## Logistic Regression
 ### Simple Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
-| 100 | 0.5025 | 0.0 | 0.696303696304 |
-| 1000 | 0.5 | 0.0 | 0.58991008991 |
-| 10000 | 0.5275 | 0 | 0.555444555445 |
+| 100 | 0.8625 | 0.88428 | 0.906593406593 |
 
 ### Advanced Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
 |---|:---:|:---:|:---:|
-| 100 | 0.505 | 0.5038 | 0.521478521479 |
-| 1000 | 0.5625 | 0.53692 | 0.509490509491 |
-| 10000 | 0.62 | 0 | 0.502997002997 |
+| 100 | 0.855 | 0.89076 | 0.875624375624 |
+
+## SVC
+### Simple Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.5025 | 0.5038 | 0.804195804196 |
+
+### Advanced Tokenizer
+| #Features  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 100 | 0.0 | 0.0| 0.0 |
 
 Words similar to great: [('time', 0.9997875690460205), ('film', 0.9997649192810059), ('love', 0.999764621257782), ('get', 0.9997416734695435), ('one', 0.9997367262840271), ('story', 0.999735951423645), ('movie', 0.9997340440750122), ('world', 0.9997314214706421), ('best', 0.9997295141220093), ('little', 0.9997293949127197)]
 words similar to bad: [('movie', 0.9997878670692444), ('film', 0.9997793436050415), ('nt', 0.9997758865356445), ('much', 0.9997627139091492), ('like', 0.9997615814208984), ('make', 0.9997614026069641), ('would', 0.9997589588165283), ('world', 0.9997525215148926), ('good', 0.9997518062591553), ('one', 0.9997491836547852)]
