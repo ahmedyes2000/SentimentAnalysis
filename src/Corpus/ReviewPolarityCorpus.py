@@ -16,7 +16,7 @@ class ReviewPolarityCorpus(Corpus):
 
     @property
     def name(self):
-        return 'Review_Polarity'
+        return 'PL04'
 
     def __init__(self, tokenizer):
         self.tokenizer = tokenizer

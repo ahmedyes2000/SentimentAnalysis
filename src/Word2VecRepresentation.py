@@ -113,21 +113,22 @@ def examine_model(corpus, number_of_features):
 
 def run_experiment():
     # classifier = LogisticRegression()
-    classifier = KNeighborsClassifier(n_neighbors=1)
-    # classifier = SVC()
+    for i in [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]:
+        classifier = KNeighborsClassifier(n_neighbors=i)
+        # classifier = SVC()
 
-    number_of_features = 100
-    tokenizer = SimpleTokenizer()
-    # tokenizer = AdvancedTokenizer()
-    # tokenizer = BigramTokenizer()
+        number_of_features = 100
+        tokenizer = SimpleTokenizer()
+        # tokenizer = AdvancedTokenizer()
+        # tokenizer = BigramTokenizer()
 
-    # corpus = ReviewPolarityCorpus(tokenizer)
-    # corpus = ImdbCorpus(tokenizer)
-    corpus = SubjectivityCorpus(tokenizer)
+        # corpus = ReviewPolarityCorpus(tokenizer)
+        corpus = ImdbCorpus(tokenizer)
+        # corpus = SubjectivityCorpus(tokenizer)
 
-    model = get_model(corpus, number_of_features)
+        model = get_model(corpus, number_of_features)
 
-    accuracy = evaluate(model, corpus, number_of_features, classifier)
-    print(accuracy)
+        accuracy = evaluate(model, corpus, number_of_features, classifier)
+        print("Accuracy for {0} = {1}".format(i, accuracy))
 
 run_experiment()
