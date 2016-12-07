@@ -31,7 +31,7 @@ def line_plots(**kwargs):
         plt.plot(x,gensim_w2v,color='black',linestyle='-.',label='gensim_w2v')
     if 'gensim_d2v' in keys_:
         gensim_w2v=kwargs.pop('gensim_d2v')
-        plt.plot(x,gensim_d2v,color='brown',linestyle='--',label='gensim_doc2vec,lsa')
+        plt.plot(x,gensim_d2v,color='magenta',linestyle='-',label='gensim_doc2vec,lsa')
     
     # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=5, ncol=3, mode="expand", borderaxespad=0.)
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
@@ -62,8 +62,8 @@ ugram_counts=[0.642,0.51,0.72,0.6,0.62,0.66,0.59,0.574]
 ugrams_pa=[0.64,0.51,0.7,0.6,0.63,0.67,0.56,0.573]
 word2vec=[0.58,0.48,0.537,0.53,0.515,0.54,0.5,0.51]
 bigrams=[0.58,0.5,0.54,0.53,0.51,0.6,0.53,0.57]
-gensim_w2v=[0.01, 0.01, 0.01, 0.01, 0.01, 0.907092907093, 0.01, 0.906593406593];
-# gensim_d2v=[];
+gensim_w2v=[0, 0, 0, 0, 0, 0.907092907093, 0, 0.906593406593];
+gensim_d2v=[0, 0, 0, 0, 0, 0.8245, 0, 0.89];
 
 stats_dict={};
 stats_dict['results_dir']='../results/'
@@ -74,7 +74,7 @@ stats_dict['ugrams_pa']=ugrams_pa;
 stats_dict['word2vec']=word2vec;
 stats_dict['bigrams']=bigrams;
 stats_dict['gensim_w2v']=gensim_w2v;
-# stats_dict['gensim_d2v']=gensim_d2v;
+stats_dict['gensim_d2v']=gensim_d2v;
 line_plots(**stats_dict);         
 
 
@@ -84,7 +84,7 @@ ugrams_pa=[0.64,0.51,0.75,0.6,0.63,0.67,0.56,0.573]
 word2vec=[0.58,0.48,0.537,0.53,0.515,0.54,0.5,0.51]
 bigrams=[0.58,0.5,0.54,0.53,0.51,0.6,0.53,0.57]
 gensim_w2v=[0, 0, 0, 0, 0, 0.75, 0, 0.8625];
-# gensim_d2v=[];
+gensim_d2v=[0, 0, 0, 0, 0, 0.7575, 0, 0.865];
 
 stats_dict={};
 stats_dict['results_dir']='../results/'
@@ -95,7 +95,7 @@ stats_dict['ugrams_pa']=ugrams_pa;
 stats_dict['word2vec']=word2vec;
 stats_dict['bigrams']=bigrams;
 stats_dict['gensim_w2v']=gensim_w2v;
-# stats_dict['gensim_d2v']=gensim_d2v;
+stats_dict['gensim_d2v']=gensim_d2v;
 line_plots(**stats_dict);         
 
 
