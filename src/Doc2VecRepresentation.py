@@ -137,7 +137,7 @@ def visualize():
     np.set_printoptions(suppress=True)
     X = model.fit_transform(X_train_files)
 
-    plot_word_embeddings("Doc2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
+    plot_word_embeddings("Doc2Vec", corpus.name, "Objective", "Subjective", X, y_train_labels)
 
 
 visualize()

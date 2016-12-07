@@ -167,8 +167,8 @@ def visualize():
     # tokenizer = BigramTokenizer()
 
     # corpus = ReviewPolarityCorpus(tokenizer)
-    corpus = ImdbCorpus(tokenizer)
-    # corpus = SubjectivityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
+    corpus = SubjectivityCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
 
@@ -180,7 +180,7 @@ def visualize():
     np.set_printoptions(suppress=True)
     X = tsne_model.fit_transform(X_train_data)
 
-    plot_word_embeddings("Word2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
+    plot_word_embeddings("Word2Vec", corpus.name, "Objective", "Subjective", X, y_train_labels)
 
 
 visualize()
