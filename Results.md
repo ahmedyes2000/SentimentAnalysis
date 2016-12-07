@@ -118,23 +118,6 @@
 ![Simple Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
 (/results/Word2Vec/K Nearest Neighbor/Simple_Tokenizer_Accuracy.png)
 
-### Advanced Tokenizer
-| #Neighbours  | PL04 | IMDB Dataset | Subjectivity |
-|---|:---:|:---:|:---:|
-| 1 | 0.7075 | 0.76756 | 0.82967032967 |
-| 5 | .72 | 0.8202 | 0.8661338661338661 |
-| 10 | 0.7325 | 0.8308 | 0.8621378621378621 |
-| 15 | 0.715 | 0.8384 | 0.8706293706293706 |
-| 20 | 0.73 | 0.84216 | 0.8701298701298701 |
-| 25 | 0.7325 | 0.84268 | 0.8756243756243757 |
-| 30 | 0.75 | 0.84436 | 0.8741258741258742 |
-| 35 | 0.7225 | 0.84472 | 0.8741258741258742 |
-| 40 | 0.735 | 0.84512 | 0.8736263736263736 |
-| 45 | 0.72 | 0.84396 | 0.8746253746253746 |
-| 50 | 0.7275 | 0.84536 | 0.8756243756243757 |
-![Advanced Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
-(/results/Word2Vec/K Nearest Neighbor/Advanced_Tokenizer_Accuracy.png)
-
 Top 10 Words similar to great:
 
 | Word  | Similarity Score |
@@ -164,6 +147,53 @@ Top 10 Words similar to bad:
 | good | 0.6407232284545898 |
 | awful, | 0.633628785610199 |
 | crappy | 0.6150558590888977 |
+
+### Advanced Tokenizer
+| #Neighbours  | PL04 | IMDB Dataset | Subjectivity |
+|---|:---:|:---:|:---:|
+| 1 | 0.7075 | 0.76756 | 0.82967032967 |
+| 5 | .72 | 0.8202 | 0.8661338661338661 |
+| 10 | 0.7325 | 0.8308 | 0.8621378621378621 |
+| 15 | 0.715 | 0.8384 | 0.8706293706293706 |
+| 20 | 0.73 | 0.84216 | 0.8701298701298701 |
+| 25 | 0.7325 | 0.84268 | 0.8756243756243757 |
+| 30 | 0.75 | 0.84436 | 0.8741258741258742 |
+| 35 | 0.7225 | 0.84472 | 0.8741258741258742 |
+| 40 | 0.735 | 0.84512 | 0.8736263736263736 |
+| 45 | 0.72 | 0.84396 | 0.8746253746253746 |
+| 50 | 0.7275 | 0.84536 | 0.8756243756243757 |
+![Advanced Tokenizer Accuracy using K-Nearest Neighbors and Word2Vec representation]
+(/results/Word2Vec/K Nearest Neighbor/Advanced_Tokenizer_Accuracy.png)
+
+Top 10 Words similar to great:
+
+| Word  | Similarity Score |
+|---|:---:|
+| excellent | 0.7913162112236023 |
+| wonderful | 0.7570832967758179 |
+| fantastic | 0.7252763509750366 |
+| terrific | 0.7173399925231934 |
+| good | 0.7079200148582458 |
+| amazing | 0.6914335489273071 |
+| outstanding | 0.6867328882217407 |
+| awesome | 0.6357970237731934 |
+| fine | 0.617285430431366 |
+| superb | 0.616012454032898 |
+
+Top 10 Words similar to bad:
+
+| Word  | Similarity Score |
+|---|:---:|
+| awful | 0.8287161588668823 |
+| terrible | 0.8002560138702393 |
+| horrible | 0.7771445512771606 |
+| worse | 0.7308253049850464 |
+| crappy | 0.6889713406562805 |
+| horrid | 0.6558262705802917 |
+| lousy | 0.6454734802246094 |
+| stupid | 0.6288061141967773 |
+| sucks | 0.6285834312438965 |
+| poor | 0.6227436065673828 |
 
 # Doc2Vec Representation
 ## Logistic Regression Classification

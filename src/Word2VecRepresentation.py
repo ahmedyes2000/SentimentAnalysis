@@ -10,6 +10,7 @@ from sklearn.svm import SVC
 
 from src.Analyzer import plot_word_embeddings
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
+from src.Labels import Labels
 from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
 
 import logging
@@ -109,8 +110,8 @@ def evaluate(model, corpus: Corpus, number_of_features, classifier):
 
 def examine_model():
     number_of_features = 100
-    tokenizer = SimpleTokenizer()
-    # tokenizer = AdvancedTokenizer()
+    # tokenizer = SimpleTokenizer()
+    tokenizer = AdvancedTokenizer()
     # tokenizer = BigramTokenizer()
 
     # corpus = ReviewPolarityCorpus(tokenizer)
@@ -118,8 +119,25 @@ def examine_model():
     # corpus = SubjectivityCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
+
     print("Words similar to great:", model.similar_by_word("great", 10))
     print("words similar to bad:", model.similar_by_word("bad", 10))
+
+    words = []
+    word_sentiment = []
+    for word, score in model.similar_by_word("great", 10):
+        words.append(model[word])
+        word_sentiment.append(Labels.strong_pos)
+
+    for word, score in model.similar_by_word("bad", 10):
+        words.append(model[word])
+        word_sentiment.append(Labels.strong_neg)
+
+    tsne_model = TSNE(n_components=2, random_state=0)
+    np.set_printoptions(suppress=True)
+    X = tsne_model.fit_transform(words)
+
+    plot_word_embeddings("Word2Vec", corpus.name, "Positive", "Negative", X, word_sentiment)
 
 
 def run_experiment():
@@ -149,8 +167,8 @@ def visualize():
     # tokenizer = BigramTokenizer()
 
     # corpus = ReviewPolarityCorpus(tokenizer)
-    # corpus = ImdbCorpus(tokenizer)
-    corpus = SubjectivityCorpus(tokenizer)
+    corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
 
@@ -158,12 +176,12 @@ def visualize():
     X_train_files, y_train_labels = corpus.get_training_data()
     X_train_data = file_to_vector(X_train_files, model, number_of_features)
 
-    model = TSNE(n_components=2, random_state=0)
+    tsne_model = TSNE(n_components=2, random_state=0)
     np.set_printoptions(suppress=True)
-    X = model.fit_transform(X_train_data)
+    X = tsne_model.fit_transform(X_train_data)
 
     plot_word_embeddings("Word2Vec", corpus.name, "Positive", "Negative", X, y_train_labels)
 
 
-# visualize()
-examine_model()
+visualize()
+# examine_model()
