@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Accuracy Vs Classifiers - PL04.png" afterPath="$PROJECT_DIR$/results/Accuracy Vs Classifiers - PL04.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Accuracy Vs Classifiers - Subjectivity.png" afterPath="$PROJECT_DIR$/results/Accuracy Vs Classifiers - Subjectivity.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results.md" afterPath="$PROJECT_DIR$/Results.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Analyzer.py" afterPath="$PROJECT_DIR$/src/Analyzer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CountVectorRepresentation.py" afterPath="$PROJECT_DIR$/src/CountVectorRepresentation.py" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,42 +24,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
+      <file leaf-file-name="Analyzer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="51" />
+            <state relative-caret-position="210">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="e#666#1405#0" expanded="false" />
-                <element signature="e#1467#1936#0" expanded="false" />
-                <element signature="e#1994#2853#0" expanded="false" />
-                <element signature="e#2080#2836#0" expanded="false" />
-                <element signature="e#2601#2781#0" expanded="false" />
-                <element signature="e#2919#3139#0" expanded="false" />
-                <element signature="e#3215#3970#0" expanded="false" />
-                <element signature="e#3998#5003#0" expanded="false" />
-                <element signature="e#5032#5695#0" expanded="false" />
+                <element signature="e#284#1910#0" expanded="false" />
+                <element signature="e#2040#2472#0" expanded="false" />
+                <element signature="e#2590#3837#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analyzer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
+      <file leaf-file-name="CountVectorRepresentation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CountVectorRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="29" column="98" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="98" />
+            <state relative-caret-position="44">
+              <caret line="108" column="59" lean-forward="false" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#989#1207#0" expanded="false" />
+                <element signature="e#1267#1611#0" expanded="false" />
+                <element signature="e#1665#1968#0" expanded="false" />
+                <element signature="e#2038#2262#0" expanded="false" />
+                <element signature="e#3854#5519#0" expanded="false" />
+                <element signature="e#5585#7052#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classification.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/classification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Results.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Results.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="180">
-                <caret line="202" column="13" lean-forward="false" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="13" />
+              <first_editor relative-caret-position="299">
+                <caret line="77" column="23" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -105,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/VectorRepresentationImplementation.py" />
         <option value="$PROJECT_DIR$/src/SubjectivityCorpus.py" />
         <option value="$PROJECT_DIR$/src/Main.py" />
-        <option value="$PROJECT_DIR$/src/CountVectorRepresentation.py" />
         <option value="$PROJECT_DIR$/report/Report.tex" />
         <option value="$PROJECT_DIR$/src/Document/SentenceDocument.py" />
         <option value="$PROJECT_DIR$/src/Document/Document.py" />
@@ -124,16 +146,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tests/AnalyzerTests.py" />
         <option value="$PROJECT_DIR$/src/Corpus/ReviewPolarityCorpus.py" />
-        <option value="$PROJECT_DIR$/src/Analyzer.py" />
         <option value="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
-        <option value="$PROJECT_DIR$/Results.md" />
         <option value="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
         <option value="$PROJECT_DIR$/src/NeatPlots.py" />
+        <option value="$PROJECT_DIR$/src/Analyzer.py" />
+        <option value="$PROJECT_DIR$/src/CountVectorRepresentation.py" />
+        <option value="$PROJECT_DIR$/Results.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="29" />
     <option name="width" value="1280" />
     <option name="height" value="717" />
   </component>
@@ -208,6 +231,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SentimentAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SentimentAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bag of Words" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -232,7 +273,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.NeatPlots">
+  <component name="RunManager" selected="Python.VectorRepresentation">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -564,15 +605,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="29" width="1280" height="717" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3884035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3884035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5056" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5056" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.4944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5056" order="2" side_tool="true" content_ui="tabs" />
@@ -722,13 +763,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2016.3/python_stubs/776880377/_collections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Documents/FileDocument.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -772,21 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="122" column="19" lean-forward="false" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Corpus/PreGenerated/Doc2Vec/Subjectivity_SimpleTokenizer_100">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state />
@@ -811,14 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CountVectorRepresentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,14 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="79" lean-forward="false" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/linear_model/logistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1118" column="8" lean-forward="false" selection-start-line="1118" selection-start-column="8" selection-end-line="1118" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1052,11 +1055,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/Accuracy Vs Classifiers - Subjectivity.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/AnalyzerTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1070,31 +1068,6 @@
         <state relative-caret-position="-12">
           <caret line="1180" column="8" lean-forward="false" selection-start-line="1180" selection-start-column="8" selection-end-line="1180" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="98" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="180">
-            <caret line="202" column="13" lean-forward="false" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="13" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1114,11 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/Accuracy Vs Classifiers - PL04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1127,25 +1095,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NeatPlots.py">
+    <entry file="file://$PROJECT_DIR$/results/Accuracy Vs Classifiers - PL04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/Accuracy Vs Classifiers - Subjectivity.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+        <state relative-caret-position="210">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#583#704#0" expanded="false" />
-            <element signature="e#742#871#0" expanded="false" />
-            <element signature="e#908#1031#0" expanded="false" />
-            <element signature="e#1067#1179#0" expanded="false" />
+            <element signature="e#284#1910#0" expanded="false" />
+            <element signature="e#2040#2472#0" expanded="false" />
+            <element signature="e#2590#3837#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CountVectorRepresentation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="108" column="59" lean-forward="false" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#989#1207#0" expanded="false" />
+            <element signature="e#1267#1611#0" expanded="false" />
+            <element signature="e#1665#1968#0" expanded="false" />
+            <element signature="e#2038#2262#0" expanded="false" />
+            <element signature="e#3854#5519#0" expanded="false" />
+            <element signature="e#5585#7052#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+          <folding>
+            <element signature="e#14169#15304#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="51" />
+        <state relative-caret-position="463">
+          <caret line="145" column="41" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="41" />
           <folding>
+            <element signature="e#0#18#0" expanded="true" />
             <element signature="e#666#1405#0" expanded="false" />
             <element signature="e#1467#1936#0" expanded="false" />
             <element signature="e#1994#2853#0" expanded="false" />
@@ -1154,8 +1165,57 @@
             <element signature="e#2919#3139#0" expanded="false" />
             <element signature="e#3215#3970#0" expanded="false" />
             <element signature="e#3998#5003#0" expanded="false" />
-            <element signature="e#5032#5695#0" expanded="false" />
+            <element signature="e#5718#6464#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/linear_model/logistic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="1118" column="8" lean-forward="false" selection-start-line="1118" selection-start-column="8" selection-end-line="1118" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NeatPlots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#92#2261#0" expanded="false" />
+            <element signature="e#583#704#0" expanded="false" />
+            <element signature="e#742#871#0" expanded="false" />
+            <element signature="e#908#1031#0" expanded="false" />
+            <element signature="e#1067#1179#0" expanded="false" />
+            <element signature="e#2262#2294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/neighbors/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="299">
+            <caret line="77" column="23" lean-forward="false" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

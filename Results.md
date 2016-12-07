@@ -14,7 +14,7 @@
 | 35  | 0.845  | 0.83652 | 0.908591409 |
 
 ![Simple Tokenizer Accuracy]
-(/results/Naive Bayes Classifier/Simple_Tokenizer_Accuracy.png)
+(/results/Bag of Words/Naive Bayes Classifier/Simple_Tokenizer_Accuracy.png)
 
 ###Advanced Tokenizer
 | Alpha  | PL04 | IMDB Dataset | Subjectivity |
@@ -30,7 +30,7 @@
 
 
 ![Advanced Tokenizer Accuracy]
-(/results/Naive Bayes Classifier/Advanced_Tokenizer_Accuracy.png)
+(/results/Bag of Words/Naive Bayes Classifier/Advanced_Tokenizer_Accuracy.png)
 
 ###Bigram Tokenizer
 | Alpha  | PL04 | IMDB Dataset | Subjectivity |
@@ -45,7 +45,7 @@
 | 35  | 0.8125  | 0.85956 | 0.8811188811188811 |
 
 ![Bigram Tokenizer Accuracy]
-(/results/Naive Bayes Classifier/Bigram_Tokenizer_Accuracy.png)
+(/results/Bag of Words/Naive Bayes Classifier/Bigram_Tokenizer_Accuracy.png)
 
 ## Multinomial NB Classifier
 ### Advanced Tokenizer
@@ -60,7 +60,7 @@
 | 30  | 0.725  | 0.78288 | 0.8736263736263736 |
 | 35  | 0.7175  | 0.77832 | 0.8736263736263736 |
 ![Advanced Tokenizer Accuracy]
-(/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
+(/results/Bag of Words/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
 
 ## Bernoulli NB Classifier
 ###Advanced Tokenizer
@@ -75,7 +75,7 @@
 | 30  | 0.6025  | 0.8134 | 0.8386613386613386 |
 | 35  | 0.59  | 0.81132 | 0.8266733266733267 |
 ![Advanced Tokenizer Accuracy]
-(/results/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
+(/results/Bag of Words/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
 
 # Word2Vec Representation
 ## Logistic Regression
