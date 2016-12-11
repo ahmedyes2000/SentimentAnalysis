@@ -171,13 +171,13 @@ def run_experiment():
         # classifier = SVC()
 
         number_of_features = 100
-        tokenizer = SimpleTokenizer()
-        # tokenizer = AdvancedTokenizer()
+        # tokenizer = SimpleTokenizer()
+        tokenizer = AdvancedTokenizer()
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        corpus = ImdbCorpus(tokenizer)
-        # corpus = SubjectivityCorpus(tokenizer)
+        # corpus = ImdbCorpus(tokenizer)
+        corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 
