@@ -176,8 +176,8 @@ def run_experiment():
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        # corpus = ImdbCorpus(tokenizer)
-        corpus = SubjectivityCorpus(tokenizer)
+        corpus = ImdbCorpus(tokenizer)
+        # corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 
