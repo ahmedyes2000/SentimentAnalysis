@@ -86,3 +86,22 @@ def plot_word_embeddings(representation_model_name, data_set_name, label_name_po
     if not os.path.exists(results_dir):
         os.mkdir(results_dir)
     fig.savefig(os.path.join(results_dir, "{0}.png".format(data_set_name.replace(" ", "_"))))
+
+def plot_words(representation_model_name, data_set_name, X, words_label, word_limit=100):
+    results_dir = "../results/{0}".format(representation_model_name)
+
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
+
+    for index, vec in enumerate(X):
+        # print ('%s %s'%(words_label[index],vec))
+        if index < word_limit:
+            x, y = vec[0] * 100, vec[1] * 100
+            plt.scatter(x, y)
+            plt.annotate(words_label[index], xy=(x, y))
+
+    fig = plt.gcf()
+    fig.suptitle("2D t-sne projection of {0} vectors - {1} dataset".format(representation_model_name, data_set_name), fontsize=20, x=0.5, y= 0.040)
+    plt.show()
+    plt.draw()
+    fig.savefig(os.path.join(results_dir, "{0} Word Plot.png".format(data_set_name.replace(" ", "_"))))

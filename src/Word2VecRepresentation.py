@@ -6,10 +6,11 @@ from gensim.models import Word2Vec
 from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.manifold import TSNE
+from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
-from src.Analyzer import plot_word_embeddings
+from src.Analyzer import plot_word_embeddings, plot_words
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
 from src.Labels import Labels
 from src.Tokenizers import AdvancedTokenizer, BigramTokenizer, SimpleTokenizer
@@ -98,15 +99,7 @@ def kFoldCrossValidate(k, model, corpus: Corpus, number_of_features, classifier)
     X_train_data = file_to_vector(X_train_files, model, number_of_features)
     y_train_labels_array = np.array(y_train_labels)
 
-    fold = 0
-    for train_index, test_index in kf.split(X_train_data):
-        logging.log(logging.INFO, "Fold # {0}".format(fold))
-        training_data, test_data = X_train_data[train_index], X_train_data[test_index]
-        training_labels, test_labels = y_train_labels_array[train_index], y_train_labels_array[test_index]
-        classifier.fit(training_data, training_labels)
-        score = classifier.score(test_data, test_labels)
-        scores.append(score)
-        fold = fold + 1
+    scores = cross_val_score(classifier, X_train_data, y_train_labels_array, cv=k)
     return scores
 
 
@@ -165,8 +158,8 @@ def examine_model():
 
 
 def run_experiment():
-    # classifier = LogisticRegression()
     for i in [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]:
+        # classifier = LogisticRegression()
         classifier = KNeighborsClassifier(n_neighbors=i)
         # classifier = SVC()
 
@@ -176,14 +169,14 @@ def run_experiment():
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        corpus = ImdbCorpus(tokenizer)
-        # corpus = SubjectivityCorpus(tokenizer)
+        # corpus = ImdbCorpus(tokenizer)
+        corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 
         # accuracy = evaluate(model, corpus, number_of_features, classifier)
-        accuracy = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
-        print("Accuracy for {0} = {1}".format(i, accuracy))
+        scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
+        print("{0}, {1}".format(i), scores)
 
 
 def visualize():
@@ -208,7 +201,37 @@ def visualize():
 
     plot_word_embeddings("Word2Vec", corpus.name, "Objective", "Subjective", X, y_train_labels)
 
+def visualize_words():
+    number_of_features = 100
+    # tokenizer = SimpleTokenizer()
+    tokenizer = AdvancedTokenizer()
+    # tokenizer = BigramTokenizer()
+
+    corpus = ReviewPolarityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
+
+    model = get_model(corpus, number_of_features)
+
+    logging.log(logging.INFO, "building word vector array")
+    words_np = []
+    words_label = []
+    word_limit = 100
+    for word in ["great", "bad"]:
+        similar_words = model.similar_by_word(word, 10)
+        for similar_word in similar_words:
+            words_np.append(model[similar_word[0]])
+            words_label.append(similar_word[0])
+
+    logging.log(logging.INFO, "dimensionality reduction")
+    tsne_model = TSNE(n_components=2, random_state=0)
+    np.set_printoptions(suppress=True)
+    X = tsne_model.fit_transform(words_np)
+
+    logging.log(logging.INFO, "plotting")
+    plot_words("Word2Vec", corpus.name, X, words_label, word_limit)
 
 # visualize()
 # examine_model()
-run_experiment()
+# run_experiment()
+visualize_words()
