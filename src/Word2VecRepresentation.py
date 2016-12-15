@@ -158,24 +158,24 @@ def examine_model():
 
 
 def run_experiment():
-    for i in [35]:
-        # classifier = LogisticRegression()
-        classifier = KNeighborsClassifier(n_neighbors=i)
+    for i in [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, .90, 1.0]:
+        classifier = LogisticRegression(C=i)
+        # classifier = KNeighborsClassifier(n_neighbors=i)
         # classifier = SVC()
 
         number_of_features = 100
-        # tokenizer = SimpleTokenizer()
-        tokenizer = AdvancedTokenizer()
+        tokenizer = SimpleTokenizer()
+        # tokenizer = AdvancedTokenizer()
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        corpus = ImdbCorpus(tokenizer)
-        # corpus = SubjectivityCorpus(tokenizer)
+        # corpus = ImdbCorpus(tokenizer)
+        corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 
-        scores = evaluate(model, corpus, number_of_features, classifier)
-        # scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
+        # scores = evaluate(model, corpus, number_of_features, classifier)
+        scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
         print("{0}, {1}".format(i, scores))
 
 
