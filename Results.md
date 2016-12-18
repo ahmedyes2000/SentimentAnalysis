@@ -94,18 +94,6 @@
 | Word2Vec            | Advanced Tokenizer | Random Forests      |              |        |         | 
 
 
-
-## Logistic Regression
-### Simple Tokenizer
-| #Features  | PL04 | IMDB Dataset | Subjectivity |
-|---|:---:|:---:|:---:|
-| 100 | 0.8625 | 0.88428 | 0.906593406593 |
-
-### Advanced Tokenizer
-| #Features  | PL04 | IMDB Dataset | Subjectivity |
-|---|:---:|:---:|:---:|
-| 100 | 0.855 | 0.89076 | 0.875624375624 |
-
 ## SVC
 ### Simple Tokenizer
 | #Features  | PL04 | IMDB Dataset | Subjectivity |
