@@ -3,12 +3,14 @@ import os
 from random import shuffle
 
 from gensim.models import Word2Vec
+from sklearn.ensemble import BaggingClassifier
 from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.manifold import TSNE
 from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
+from sklearn.ensemble import AdaBoostClassifier
 
 from src.Analyzer import plot_word_embeddings, plot_words
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
@@ -90,8 +92,6 @@ def save_model(model, corpus: Corpus, number_of_features):
 
 def kFoldCrossValidate(k, model, corpus: Corpus, number_of_features, classifier):
     logging.log(logging.INFO, "kFold Cross Validation {0}".format(k))
-    kf = KFold(n_splits=k)
-    scores = []
 
     logging.log(logging.INFO, "Getting training documents")
     X_train_files, y_train_labels = corpus.get_training_data()
@@ -158,10 +158,12 @@ def examine_model():
 
 
 def run_experiment():
-    for i in [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, .90, 1.0]:
-        classifier = LogisticRegression(C=i)
+    for i in [10, 50, 100, 150, 200]:
+        # classifier = LogisticRegression(C=i)
         # classifier = KNeighborsClassifier(n_neighbors=i)
         # classifier = SVC()
+        # classifier = AdaBoostClassifier()
+        classifier = BaggingClassifier(n_estimators=i)
 
         number_of_features = 100
         tokenizer = SimpleTokenizer()
@@ -169,8 +171,8 @@ def run_experiment():
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        # corpus = ImdbCorpus(tokenizer)
-        corpus = SubjectivityCorpus(tokenizer)
+        corpus = ImdbCorpus(tokenizer)
+        # corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 

@@ -1,0 +1,16 @@
+\begin{thebibliography}{}
+
+\bibitem[Blei et~al., 2003]{blei2003latent}
+Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
+\newblock Latent dirichlet allocation.
+\newblock {\em Journal of machine Learning research}, 3(Jan):993--1022.
+
+\bibitem[Pang and Lee, 2004]{pang2004sentimental}
+Pang, B. and Lee, L. (2004).
+\newblock A sentimental education: Sentiment analysis using subjectivity
+  summarization based on minimum cuts.
+\newblock In {\em Proceedings of the 42nd annual meeting on Association for
+  Computational Linguistics}, page 271. Association for Computational
+  Linguistics.
+
+\end{thebibliography}

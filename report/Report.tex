@@ -6,21 +6,58 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
+\usepackage{xcolor,sectsty}
 
+% One must be careful when importing hyperref. Usually it has to be the last package to be imported, but there might be some exceptions to this rule.
+\usepackage{hyperref}
+
+% Styles
+\definecolor{astral}{RGB}{46,116,181}
+\subsectionfont{\color{astral}}
+\sectionfont{\color{astral}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=violet
+}
+ 
+\urlstyle{same}
 %SetFonts
 
 %SetFonts
 
 
-\title{Brief Article}
-\author{The Author}
-%\date{}							% Activate to display a given date or no date
+\title{\color{astral}Sentiment Analysis using Word Vectors}
+\author{ATJ, NSB}
+\date{}							% Activate to display a given date or no date
 
 \begin{document}
 \maketitle
-%\section{}
-%\subsection{}
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+\section*{Abstract}
+\subsection*{What is Sentiment Analysis?}
+Sentiment Analysis is the task of extracting the favorable or unfavorable inclination of a person towards a subject or topic. For example, we could analyze twitter feeds to predict or assess the stock market trends, the favorability of a presidential nominee during elections, or how good a movie is based on the volume of the tweets and their content. It can be used to get user opinions on the products the user purchased based on the star ratings and reviews submitted through online portals like amazon.com which can be used by product manufacturers to identify how well their product is received by the majority of users. This kind of feedback is invaluable and very crucial in many cases.
+\subsection*{Some common classifiers}
+\paragraph{}
+Sentiment Analysis is a text categorization problem in Natural Language Processing (NLP) that is often addressed by using a multinomial naïve Bayes classifier or a Support Vector Machine (SVM) classifier. A Naïve Bayes classifier makes several assumptions like representing a document as a “bag of words” in which the position of words does not matter. It also assumes that the words are conditionally independent given the class to which they belong. This is implicitly errant when it comes to sentiment analysis because it ignores the possibility of negated reviews like negated positive reviews which become negative and negated negative which might become positive. An SVM classifier tries to minimize a hinge loss function and combined with a regularization parameter, for a binary classification, it learns the equation of a separating line the classes. All the data points falling on one side of the line are classified with that label.
+\paragraph{}
+It learns the weights or coefficients of the line through training. Other classifiers which share a similar decision boundary are Gaussian naïve Bayes , Logistic Regression etc. KNN is a non-parametric classifier that stores every training sample in memory, gets better with increase in the number of data samples and suffers from the famous “curse of dimensionality”. Decision trees and random forests which use multitudes of them averaged build a binary tree with each node as a feature value decision point.
+Neural networks provide good improvement in the accuracies of NLP classifiers, most of which is through the usage of “word vectors” as features over the regular “one hot encoding” or “bag of words”. LDA and LSA are two most commonly used techniques to generate word vectors.
+\paragraph{}
+Latent Dirichlet Allocation(LDA; \cite{blei2003latent}) is a probabilistic document model that assumes each document is a mixture of latent topics. This models the topics directly than the words and is less efficient. The result is a word–topic matrix in which the rows are taken to represent word meanings or word vectors. Latent Semantic Analysis (LSA) is a vector space model which explicitly learns semantic word vectors by applying singular value decomposition (SVD) to factor a term–document co-occurrence matrix. While LSA captures the semantic relationships between words, it doesn’t capture the sentimental proximities or differences. For example, ``wonderful'', ``delightful'' and ``awful'', ``ghastly'' all seem to have similar semantic proximity or representation.
+\section*{Scope of the Project}
+\paragraph{}
+In this project, we hope to evaluate different word and document vector representations for sentiment and subjectivity analysis. Sentiment determines polarity of a document while subjectivity says if the author is subjective or objective in his opinion. We plan to compare document vectors such as bag of words (unigram) count frequency, bag of words(unigram) presence/absence representation, bigram word dependencies, and word vectors learnt from LDA, LSA, word2vec, neural network , assign strong\_pos/weak\_pos / strong\_neg / weak\_neg / neutral tag to each word in a document and using them with classifiers such as Naïve Bayes, KNN, Decision Trees, SVM, Ensemble/Boosting classifiers over the three data sets we mention below. We hope to build different pipelines with stages of preprocessing, feature extraction, classifier training, hyper parameter selection and come up with the best that performs across all the data sets. We plan to reach the existing accuracy levels of classification using the respective vector representations and try to improve if possible.
+\subsection*{Dataset}
+We will be employing the sentiment polarity v2.0 dataset and the subjectivity dataset provided by (\cite{pang2004sentimental}) which are available online at \url{http://www.cs.cornell.edu/People/pabo/movie-review-data/}. We will also use the \href{http://ai.stanford.edu/~amaas/data/sentiment/}{Large Movie Review Dataset v1.0}. The polarity dataset v2.0 (\cite{pang2004sentimental}) consists of 2,000 positive and negative labelled movie reviews, and the subjectivity dataset (\cite{pang2004sentimental}) contains 5000 objective and 5000 subjective sentences. 50,000 reviews they have gathered from IMDB, The table below gives the classification accuracies that (Maas et al., 2011) obtained on the three datasets and classification accuracies reported by others(Sadeghian & Sharafat, n.d.)
 
+We don't plan on doing any human annotation. We plan to use the data sets available as are.
 
-
+\bibliography{report_bibliography}
+\bibliographystyle{apalike}
 \end{document}  
