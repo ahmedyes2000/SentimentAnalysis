@@ -9,6 +9,8 @@
 \usepackage{xcolor,sectsty}
 \usepackage{float}
 
+\bibliographystyle{apalike}
+
 % One must be careful when importing hyperref. Usually it has to be the last package to be imported, but there might be some exceptions to this rule.
 \usepackage{hyperref}
 
@@ -75,6 +77,8 @@ We don't plan on doing any human annotation. We plan to use the data sets availa
 \label{table:1}
 \end{table}
 
+\subsection*{Software}
+Several preprocessing steps for documents like turning all words to lower case, removing punctuation marks, removal of stop words, removal of high frequency words and stemming will be tried. All the code will be implemented in python itself. Using code libraries like sci-kit learn, nltk, regex, gensim’s word2vec where necessary.
+
 \bibliography{report_bibliography}
-\bibliographystyle{apalike}
-\end{document}  
+\end{document}

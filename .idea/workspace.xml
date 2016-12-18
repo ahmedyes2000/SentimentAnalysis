@@ -5,11 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.pdf" afterPath="$PROJECT_DIR$/report/Report.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.aux" afterPath="$PROJECT_DIR$/report/Report.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.bbl" afterPath="$PROJECT_DIR$/report/Report.bbl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.blg" afterPath="$PROJECT_DIR$/report/Report.blg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.log" afterPath="$PROJECT_DIR$/report/Report.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.tex" afterPath="$PROJECT_DIR$/report/Report.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/report_bibliography.bib" afterPath="$PROJECT_DIR$/report/report_bibliography.bib" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
+            <state relative-caret-position="327">
               <caret line="174" column="8" lean-forward="false" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="8" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -1076,7 +1074,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
+        <state relative-caret-position="327">
           <caret line="174" column="8" lean-forward="false" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
