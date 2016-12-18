@@ -5,6 +5,14 @@ Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
 \newblock Latent dirichlet allocation.
 \newblock {\em Journal of machine Learning research}, 3(Jan):993--1022.
 
+\bibitem[Maas et~al., 2011]{maas2011learning}
+Maas, A.~L., Daly, R.~E., Pham, P.~T., Huang, D., Ng, A.~Y., and Potts, C.
+  (2011).
+\newblock Learning word vectors for sentiment analysis.
+\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies-Volume 1}, pages
+  142--150. Association for Computational Linguistics.
+
 \bibitem[Pang and Lee, 2004]{pang2004sentimental}
 Pang, B. and Lee, L. (2004).
 \newblock A sentimental education: Sentiment analysis using subjectivity
@@ -12,5 +20,9 @@ Pang, B. and Lee, L. (2004).
 \newblock In {\em Proceedings of the 42nd annual meeting on Association for
   Computational Linguistics}, page 271. Association for Computational
   Linguistics.
+
+\bibitem[Sadeghian and Sharafat, ]{sadeghianbag}
+Sadeghian, A. and Sharafat, A.~R.
+\newblock Bag of words meets bags of popcorn.
 
 \end{thebibliography}

@@ -3,44 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Report.aux
 The style file: apalike.bst
 Database file #1: report_bibliography.bib
-You've used 2 entries,
+Warning--empty year in sadeghianbag
+Warning--empty journal in sadeghianbag
+You've used 4 entries,
             1935 wiz_defined-function locations,
-            485 strings with 4101 characters,
-and the built_in function-call counts, 892 in all, are:
-= -- 89
-> -- 31
-< -- 2
-+ -- 12
-- -- 10
-* -- 70
-:= -- 149
-add.period$ -- 7
-call.type$ -- 2
-change.case$ -- 15
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 39
-empty$ -- 65
-format.name$ -- 14
-if$ -- 182
+            494 strings with 4489 characters,
+and the built_in function-call counts, 1845 in all, are:
+= -- 183
+> -- 77
+< -- 4
++ -- 28
+- -- 26
+* -- 144
+:= -- 305
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 33
+chr.to.int$ -- 4
+cite$ -- 6
+duplicate$ -- 79
+empty$ -- 127
+format.name$ -- 34
+if$ -- 377
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 16
+missing$ -- 4
+newline$ -- 22
+num.names$ -- 12
+pop$ -- 40
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 33
 quote$ -- 0
-skip$ -- 29
+skip$ -- 59
 stack$ -- 0
-substring$ -- 60
-swap$ -- 9
-text.length$ -- 1
+substring$ -- 116
+swap$ -- 19
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
-warning$ -- 0
-while$ -- 7
+type$ -- 24
+warning$ -- 2
+while$ -- 14
 width$ -- 0
-write$ -- 29
+write$ -- 52
+(There were 2 warnings)

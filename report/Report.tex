@@ -7,6 +7,7 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{xcolor,sectsty}
+\usepackage{float}
 
 % One must be careful when importing hyperref. Usually it has to be the last package to be imported, but there might be some exceptions to this rule.
 \usepackage{hyperref}
@@ -54,9 +55,25 @@ Latent Dirichlet Allocation(LDA; \cite{blei2003latent}) is a probabilistic docum
 \paragraph{}
 In this project, we hope to evaluate different word and document vector representations for sentiment and subjectivity analysis. Sentiment determines polarity of a document while subjectivity says if the author is subjective or objective in his opinion. We plan to compare document vectors such as bag of words (unigram) count frequency, bag of words(unigram) presence/absence representation, bigram word dependencies, and word vectors learnt from LDA, LSA, word2vec, neural network , assign strong\_pos/weak\_pos / strong\_neg / weak\_neg / neutral tag to each word in a document and using them with classifiers such as Naïve Bayes, KNN, Decision Trees, SVM, Ensemble/Boosting classifiers over the three data sets we mention below. We hope to build different pipelines with stages of preprocessing, feature extraction, classifier training, hyper parameter selection and come up with the best that performs across all the data sets. We plan to reach the existing accuracy levels of classification using the respective vector representations and try to improve if possible.
 \subsection*{Dataset}
-We will be employing the sentiment polarity v2.0 dataset and the subjectivity dataset provided by (\cite{pang2004sentimental}) which are available online at \url{http://www.cs.cornell.edu/People/pabo/movie-review-data/}. We will also use the \href{http://ai.stanford.edu/~amaas/data/sentiment/}{Large Movie Review Dataset v1.0}. The polarity dataset v2.0 (\cite{pang2004sentimental}) consists of 2,000 positive and negative labelled movie reviews, and the subjectivity dataset (\cite{pang2004sentimental}) contains 5000 objective and 5000 subjective sentences. 50,000 reviews they have gathered from IMDB, The table below gives the classification accuracies that (Maas et al., 2011) obtained on the three datasets and classification accuracies reported by others(Sadeghian & Sharafat, n.d.)
+We will be employing the sentiment polarity v2.0 dataset and the subjectivity dataset provided by (\cite{pang2004sentimental}) which are available online at \url{http://www.cs.cornell.edu/People/pabo/movie-review-data/}. We will also use the \href{http://ai.stanford.edu/~amaas/data/sentiment/}{Large Movie Review Dataset v1.0} made available by \cite{maas2011learning}. The polarity dataset v2.0 (\cite{pang2004sentimental}) consists of 2,000 positive and negative labelled movie reviews, and the subjectivity dataset (\cite{pang2004sentimental}) contains 5000 objective and 5000 subjective sentences. The Large Movie Dataset v1.0 \cite{maas2011learning}contains 50,000 reviews split evenly into 25k train and 25k test sets. Table \ref{table:1} gives the classification accuracies that \cite{maas2011learning} obtained on the three datasets and classification accuracies reported by others \cite{sadeghianbag}.
 
 We don't plan on doing any human annotation. We plan to use the data sets available as are.
+
+\begin{table}[H]
+\begin{tabular}{ | l | p{1.5cm} | p{3cm} | p{3cm} |  }
+ \hline
+ \textbf{Features} & \textbf{PL04} & \textbf{IMDB Dataset} & \textbf{Subjectivity} \\
+ \hline
+ Bag of Words   & 85.45 & 87.80 & 87.77 \\
+ LDA & 66.70 & 67.42 & 66.65 \\
+ LSA & 84.55 & 83.96 & 82.82 \\
+ Semantic Only & 87.10 & 87.30 & 86.65 \\
+ Bag of Words SVM \cite{pang2004sentimental} & 87.15 & N/A & 90.00 \\
+ \hline
+\end{tabular}
+\caption{Classification accuracies reported by \cite{maas2011learning} and others for different word representations.}
+\label{table:1}
+\end{table}
 
 \bibliography{report_bibliography}
 \bibliographystyle{apalike}
