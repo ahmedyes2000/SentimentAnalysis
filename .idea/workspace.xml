@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.pdf" afterPath="$PROJECT_DIR$/report/Report.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.aux" afterPath="$PROJECT_DIR$/report/Report.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.blg" afterPath="$PROJECT_DIR$/report/Report.blg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.log" afterPath="$PROJECT_DIR$/report/Report.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.tex" afterPath="$PROJECT_DIR$/report/Report.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Results.xlsx" afterPath="$PROJECT_DIR$/results/Results.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results.md" afterPath="$PROJECT_DIR$/Results.md" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
@@ -43,6 +39,19 @@
                 <element signature="e#6599#7348#0" expanded="false" />
                 <element signature="e#7377#8348#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Results.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Results.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="226">
+                <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -148,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/Doc2VecRepresentation.py" />
         <option value="$PROJECT_DIR$/src/Tokenizers/AdvancedTokenizer.py" />
         <option value="$PROJECT_DIR$/src/Analyzer.py" />
-        <option value="$PROJECT_DIR$/Results.md" />
         <option value="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
+        <option value="$PROJECT_DIR$/Results.md" />
       </list>
     </option>
   </component>
@@ -560,15 +569,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28514695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.504" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.504" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.504" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.4944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5056" order="2" side_tool="true" content_ui="tabs" />
@@ -1050,21 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1112">
-            <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/sklearn/linear_model/logistic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16515">
@@ -1119,6 +1113,22 @@
         <state relative-caret-position="77895">
           <caret line="5193" column="8" lean-forward="false" selection-start-line="5193" selection-start-column="8" selection-end-line="5193" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="226">
+            <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
         </state>
       </provider>
     </entry>

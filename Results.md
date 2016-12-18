@@ -78,10 +78,21 @@
 (/results/Bag of Words/Multinomial NB Classifier/Advanced_Tokenizer_Accuracy.png)
 
 # Word2Vec Representation
-| Tokenizer          | Classifier | Subjectivity | PL04   | IMDB    | 
-|--------------------|------------|--------------|--------|---------| 
-| Simple Tokenizer   | KNN        | 0.903596404  | 0.7425 | 0.8362  | 
-| Advanced Tokenizer | KNN        | 0.875624376  | 0.72   | 0.84472 | 
+| Word Representation | Tokenizer          | Classifier          | Subjectivity | PL04   | IMDB    | 
+|---------------------|--------------------|---------------------|--------------|--------|---------| 
+| Word2Vec            | Simple Tokenizer   | KNN                 | 0.903596404  | 0.7425 | 0.8362  | 
+| Word2Vec            | Advanced Tokenizer | KNN                 | 0.875624376  | 0.72   | 0.84472 | 
+| Word2Vec            | Simple Tokenizer   | Logistic Regression | 0.906593407  | 0.8625 | 0.8842  | 
+| Word2Vec            | Advanced Tokenizer | Logistic Regression | 0.875124875  | 0.855  | 0.89076 | 
+| Word2Vec            | Simple Tokenizer   | AdaBoost            | 0.898601399  | 0.7675 | 0.81964 | 
+| Word2Vec            | Advanced Tokenizer | AdaBoost            | 0.877622378  | 0.8375 | 0.84448 | 
+| Word2Vec            | Simple Tokenizer   | Bagging             |              |        |         | 
+| Word2Vec            | Advanced Tokenizer | Bagging             |              |        |         | 
+| Word2Vec            | Simple Tokenizer   | Decision Trees      |              |        |         | 
+| Word2Vec            | Advanced Tokenizer | Decision Trees      |              |        |         | 
+| Word2Vec            | Simple Tokenizer   | Random Forests      |              |        |         | 
+| Word2Vec            | Advanced Tokenizer | Random Forests      |              |        |         | 
+
 
 
 ## Logistic Regression
