@@ -158,7 +158,7 @@ def examine_model():
 
 
 def run_experiment():
-    for i in [10, 50, 100, 150, 200]:
+    for i in [150]:
         # classifier = LogisticRegression(C=i)
         # classifier = KNeighborsClassifier(n_neighbors=i)
         # classifier = SVC()
@@ -171,8 +171,8 @@ def run_experiment():
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        # corpus = ImdbCorpus(tokenizer)
-        corpus = SubjectivityCorpus(tokenizer)
+        corpus = ImdbCorpus(tokenizer)
+        # corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 

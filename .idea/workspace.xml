@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d2d20-2ac4-44d6-8d2a-75026cb28987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.pdf" afterPath="$PROJECT_DIR$/report/Report.pdf" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/Report.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Results.xlsx" afterPath="$PROJECT_DIR$/results/Results.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results.md" afterPath="$PROJECT_DIR$/Results.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.aux" afterPath="$PROJECT_DIR$/report/Report.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.bbl" afterPath="$PROJECT_DIR$/report/Report.bbl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.blg" afterPath="$PROJECT_DIR$/report/Report.blg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.log" afterPath="$PROJECT_DIR$/report/Report.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.out" afterPath="$PROJECT_DIR$/report/Report.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Report.tex" afterPath="$PROJECT_DIR$/report/Report.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/report_bibliography.bib" afterPath="$PROJECT_DIR$/report/report_bibliography.bib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/report_bibliography.log" afterPath="$PROJECT_DIR$/report/report_bibliography.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Word2VecRepresentation.py" afterPath="$PROJECT_DIR$/src/Word2VecRepresentation.py" />
     </list>
     <ignored path="SentimentAnalysis.iws" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="Word2VecRepresentation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#867#1616#0" expanded="false" />
@@ -44,8 +46,8 @@
                 <element signature="e#2812#2992#0" expanded="false" />
                 <element signature="e#3130#3350#0" expanded="false" />
                 <element signature="e#4718#5723#0" expanded="false" />
-                <element signature="e#6599#7348#0" expanded="false" />
-                <element signature="e#7377#8348#0" expanded="false" />
+                <element signature="e#6581#7330#0" expanded="false" />
+                <element signature="e#7359#8330#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -578,14 +580,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="717" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28514695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.504" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.504" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.504" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.4944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5056" order="2" side_tool="true" content_ui="tabs" />
@@ -1124,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word2VecRepresentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#867#1616#0" expanded="false" />
@@ -1134,8 +1136,8 @@
             <element signature="e#2812#2992#0" expanded="false" />
             <element signature="e#3130#3350#0" expanded="false" />
             <element signature="e#4718#5723#0" expanded="false" />
-            <element signature="e#6599#7348#0" expanded="false" />
-            <element signature="e#7377#8348#0" expanded="false" />
+            <element signature="e#6581#7330#0" expanded="false" />
+            <element signature="e#7359#8330#0" expanded="false" />
           </folding>
         </state>
       </provider>

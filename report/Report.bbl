@@ -5,6 +5,11 @@ Blei, D.~M., Ng, A.~Y., and Jordan, M.~I. (2003).
 \newblock Latent dirichlet allocation.
 \newblock {\em Journal of machine Learning research}, 3(Jan):993--1022.
 
+\bibitem[Le and Mikolov, 2014]{le2014distributed}
+Le, Q.~V. and Mikolov, T. (2014).
+\newblock Distributed representations of sentences and documents.
+\newblock In {\em ICML}, volume~14, pages 1188--1196.
+
 \bibitem[Maas et~al., 2011]{maas2011learning}
 Maas, A.~L., Daly, R.~E., Pham, P.~T., Huang, D., Ng, A.~Y., and Potts, C.
   (2011).
