@@ -86,8 +86,8 @@
 | Word2Vec            | Advanced Tokenizer | Logistic Regression | 0.875124875  | 0.855  | 0.89076 | 
 | Word2Vec            | Simple Tokenizer   | AdaBoost            | 0.898601399  | 0.7675 | 0.81964 | 
 | Word2Vec            | Advanced Tokenizer | AdaBoost            | 0.877622378  | 0.8375 | 0.84448 | 
-| Word2Vec            | Simple Tokenizer   | Bagging             |              |        |         | 
-| Word2Vec            | Advanced Tokenizer | Bagging             |              |        |         | 
+| Word2Vec            | Simple Tokenizer   | Bagging             | 0.905594406  | 0.77   | 0.82748 | 
+| Word2Vec            | Advanced Tokenizer | Bagging             | 0.872127872  | 0.7925 |         | 
 | Word2Vec            | Simple Tokenizer   | Decision Trees      |              |        |         | 
 | Word2Vec            | Advanced Tokenizer | Decision Trees      |              |        |         | 
 | Word2Vec            | Simple Tokenizer   | Random Forests      |              |        |         | 

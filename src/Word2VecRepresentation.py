@@ -176,8 +176,8 @@ def run_experiment():
 
         model = get_model(corpus, number_of_features)
 
-        # scores = evaluate(model, corpus, number_of_features, classifier)
-        scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
+        scores = evaluate(model, corpus, number_of_features, classifier)
+        # scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
         print("{0}, {1}".format(i, scores))
 
 
