@@ -88,10 +88,10 @@
 | Word2Vec            | Advanced Tokenizer | AdaBoost            | 0.877622378  | 0.8375 | 0.84448 | 
 | Word2Vec            | Simple Tokenizer   | Bagging             | 0.905594406  | 0.77   | 0.82748 | 
 | Word2Vec            | Advanced Tokenizer | Bagging             | 0.872127872  | 0.7925 | 0.8408  | 
-| Word2Vec            | Simple Tokenizer   | Decision Trees      |              |        |         | 
-| Word2Vec            | Advanced Tokenizer | Decision Trees      |              |        |         | 
-| Word2Vec            | Simple Tokenizer   | Random Forests      |              |        |         | 
-| Word2Vec            | Advanced Tokenizer | Random Forests      |              |        |         | 
+| Word2Vec            | Simple Tokenizer   | Decision Trees      | 0.851648352  | 0.6575 | 0.7168  | 
+| Word2Vec            | Advanced Tokenizer | Decision Trees      | 0.825174825  | 0.66   | 0.72648 | 
+| Word2Vec            | Simple Tokenizer   | Random Forests      | 0.897102897  | 0.71   | 0.78848 | 
+| Word2Vec            | Advanced Tokenizer | Random Forests      | 0.863136863  | 0.7225 | 0.79968 | 
 
 
 

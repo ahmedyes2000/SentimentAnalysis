@@ -4,6 +4,7 @@ from random import shuffle
 
 from gensim.models import Word2Vec
 from sklearn.ensemble import BaggingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.manifold import TSNE
@@ -11,6 +12,8 @@ from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import export_graphviz
 
 from src.Analyzer import plot_word_embeddings, plot_words
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
@@ -90,14 +93,8 @@ def save_model(model, corpus: Corpus, number_of_features):
     model.save(corpus_file)
 
 
-def kFoldCrossValidate(k, model, corpus: Corpus, number_of_features, classifier):
+def kFoldCrossValidate(k, model, corpus: Corpus, X_train_data, y_train_labels_array, classifier):
     logging.log(logging.INFO, "kFold Cross Validation {0}".format(k))
-
-    logging.log(logging.INFO, "Getting training documents")
-    X_train_files, y_train_labels = corpus.get_training_data()
-
-    X_train_data = file_to_vector(X_train_files, model, number_of_features)
-    y_train_labels_array = np.array(y_train_labels)
 
     scores = cross_val_score(classifier, X_train_data, y_train_labels_array, cv=k)
     return scores
@@ -158,12 +155,6 @@ def examine_model():
 
 
 def run_experiment():
-    for i in [150]:
-        # classifier = LogisticRegression(C=i)
-        # classifier = KNeighborsClassifier(n_neighbors=i)
-        # classifier = SVC()
-        # classifier = AdaBoostClassifier()
-        classifier = BaggingClassifier(n_estimators=i)
 
         number_of_features = 100
         # tokenizer = SimpleTokenizer()
@@ -176,9 +167,28 @@ def run_experiment():
 
         model = get_model(corpus, number_of_features)
 
-        scores = evaluate(model, corpus, number_of_features, classifier)
-        # scores = kFoldCrossValidate(10, model, corpus, number_of_features, classifier)
-        print("{0}, {1}".format(i, scores))
+        # logging.log(logging.INFO, "Getting training documents")
+        # X_train_files, y_train_labels = corpus.get_training_data()
+        #
+        # X_train_data = file_to_vector(X_train_files, model, number_of_features)
+        # y_train_labels_array = np.array(y_train_labels)
+
+        for i in [None]:
+            # classifier = LogisticRegression(C=i)
+            # classifier = KNeighborsClassifier(n_neighbors=i)
+            # classifier = SVC()
+            # classifier = AdaBoostClassifier()
+            # classifier = BaggingClassifier(n_estimators=i)
+            # classifier = DecisionTreeClassifier(max_depth=i)
+            classifier = RandomForestClassifier(max_depth=i)
+            scores = evaluate(model, corpus, number_of_features, classifier)
+            # scores = kFoldCrossValidate(10, model, corpus, X_train_data, y_train_labels_array, classifier)
+            print("{0}, {1}".format(i, scores))
+
+            # import pydotplus
+            # dot_data = export_graphviz(classifier, out_file=None)
+            # graph = pydotplus.graph_from_dot_data(dot_data)
+            # graph.write_pdf("../results/Word2Vec/{0} - {1} - Decision Tree.pdf".format(corpus.name, tokenizer.name))
 
 
 def visualize():
