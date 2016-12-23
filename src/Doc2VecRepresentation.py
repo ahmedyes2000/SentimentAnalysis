@@ -4,7 +4,10 @@ import os
 import numpy as np
 from gensim.models import Doc2Vec
 from gensim.models import Word2Vec
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import BaggingClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
@@ -64,14 +67,17 @@ def get_model(corpus: Corpus, number_of_features):
     return model
 
 
-def evaluate(model, corpus: Corpus, number_of_features, classifier):
+def kFoldCrossValidate(k, model, corpus: Corpus, X_train_data, y_train_labels_array, classifier):
+    logging.log(logging.INFO, "kFold Cross Validation {0}".format(k))
+
+    scores = cross_val_score(classifier, X_train_data, y_train_labels_array, cv=k)
+    return scores
+
+def evaluate(model, corpus: Corpus, number_of_features, X_train_files, y_train_labels, classifier):
     '''
     Function to measure the accuracy of a classifier on the imdb data set.
     :return: the accuracy calculated by the classifier
     '''
-    logging.log(logging.INFO, "Getting training documents")
-    X_train_files, y_train_labels = corpus.get_training_documents(model)
-
     logging.log(logging.INFO, "Getting testing documents")
     X_test_files, y_test_labels = corpus.get_testing_documents(model)
 
@@ -90,23 +96,39 @@ def examine_model(corpus: Corpus, number_of_features):
 
 
 def run_experiment():
-    # classifier = LogisticRegression()
-    # classifier = KNeighborsClassifier(n_neighbors=50)
-    classifier = SVC()
-
     number_of_features = 100
     # tokenizer = SimpleTokenizer()
     tokenizer = AdvancedTokenizer()
     # tokenizer = BigramTokenizer()
 
+    corpus = SubjectivityCorpus(tokenizer)
     # corpus = ReviewPolarityCorpus(tokenizer)
-    corpus = ImdbCorpus(tokenizer)
-    # corpus = SubjectivityCorpus(tokenizer)
+    # corpus = ImdbCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
 
-    accuracy = evaluate(model, corpus, number_of_features, classifier)
-    print(accuracy)
+    logging.log(logging.INFO, "Getting training documents")
+
+    X_train_files, y_train_labels = corpus.get_training_documents(model)
+
+    for i in [200]:
+        # classifier = LogisticRegression(C=i)
+        # classifier = KNeighborsClassifier(n_neighbors=i)
+        # classifier = SVC()
+        # classifier = AdaBoostClassifier(n_estimators=i)
+        classifier = BaggingClassifier(n_estimators=i)
+        # classifier = DecisionTreeClassifier(max_depth=i)
+        # classifier = RandomForestClassifier(max_depth=i)
+        # classifier = MultinomialNB(alpha=i)
+        scores = evaluate(model, corpus, number_of_features,X_train_files, y_train_labels, classifier)
+        # scores = kFoldCrossValidate(10, model, corpus, np.array(X_train_files), np.array(y_train_labels), classifier)
+
+        print("{0}, {1}".format(i, scores))
+
+        # import pydotplus
+        # dot_data = export_graphviz(classifier, out_file=None)
+        # graph = pydotplus.graph_from_dot_data(dot_data)
+        # graph.write_pdf("../results/Word2Vec/{0} - {1} - Decision Tree.pdf".format(corpus.name, tokenizer.name))
 
 
 def plot_results():
@@ -140,4 +162,4 @@ def visualize():
     plot_word_embeddings("Doc2Vec", corpus.name, "Objective", "Subjective", X, y_train_labels)
 
 
-visualize()
+run_experiment()

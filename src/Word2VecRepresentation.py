@@ -9,6 +9,7 @@ from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.manifold import TSNE
 from sklearn.model_selection import cross_val_score
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import AdaBoostClassifier
@@ -162,27 +163,28 @@ def run_experiment():
         # tokenizer = BigramTokenizer()
 
         # corpus = ReviewPolarityCorpus(tokenizer)
-        corpus = ImdbCorpus(tokenizer)
-        # corpus = SubjectivityCorpus(tokenizer)
+        # corpus = ImdbCorpus(tokenizer)
+        corpus = SubjectivityCorpus(tokenizer)
 
         model = get_model(corpus, number_of_features)
 
-        # logging.log(logging.INFO, "Getting training documents")
-        # X_train_files, y_train_labels = corpus.get_training_data()
-        #
-        # X_train_data = file_to_vector(X_train_files, model, number_of_features)
-        # y_train_labels_array = np.array(y_train_labels)
+        logging.log(logging.INFO, "Getting training documents")
+        X_train_files, y_train_labels = corpus.get_training_data()
 
-        for i in [None]:
+        X_train_data = file_to_vector(X_train_files, model, number_of_features)
+        y_train_labels_array = np.array(y_train_labels)
+
+        for i in [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]:
             # classifier = LogisticRegression(C=i)
             # classifier = KNeighborsClassifier(n_neighbors=i)
             # classifier = SVC()
             # classifier = AdaBoostClassifier()
             # classifier = BaggingClassifier(n_estimators=i)
             # classifier = DecisionTreeClassifier(max_depth=i)
-            classifier = RandomForestClassifier(max_depth=i)
-            scores = evaluate(model, corpus, number_of_features, classifier)
-            # scores = kFoldCrossValidate(10, model, corpus, X_train_data, y_train_labels_array, classifier)
+            # classifier = RandomForestClassifier(max_depth=i)
+            classifier = MultinomialNB(alpha=i)
+            # scores = evaluate(model, corpus, number_of_features, classifier)
+            scores = kFoldCrossValidate(10, model, corpus, X_train_data, y_train_labels_array, classifier)
             print("{0}, {1}".format(i, scores))
 
             # import pydotplus
