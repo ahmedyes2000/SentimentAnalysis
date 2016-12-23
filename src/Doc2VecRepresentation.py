@@ -6,10 +6,12 @@ from gensim.models import Doc2Vec
 from gensim.models import Word2Vec
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import BaggingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
 from src.Analyzer import plot_accuracies, plot_word_embeddings
 from src.Corpus import Corpus, ImdbCorpus, ReviewPolarityCorpus, SubjectivityCorpus
@@ -101,8 +103,8 @@ def run_experiment():
     tokenizer = AdvancedTokenizer()
     # tokenizer = BigramTokenizer()
 
-    corpus = SubjectivityCorpus(tokenizer)
-    # corpus = ReviewPolarityCorpus(tokenizer)
+    # corpus = SubjectivityCorpus(tokenizer)
+    corpus = ReviewPolarityCorpus(tokenizer)
     # corpus = ImdbCorpus(tokenizer)
 
     model = get_model(corpus, number_of_features)
@@ -111,12 +113,12 @@ def run_experiment():
 
     X_train_files, y_train_labels = corpus.get_training_documents(model)
 
-    for i in [200]:
-        # classifier = LogisticRegression(C=i)
+    for i in [.1]:
+        classifier = LogisticRegression(C=i)
         # classifier = KNeighborsClassifier(n_neighbors=i)
         # classifier = SVC()
         # classifier = AdaBoostClassifier(n_estimators=i)
-        classifier = BaggingClassifier(n_estimators=i)
+        # classifier = BaggingClassifier(n_estimators=i)
         # classifier = DecisionTreeClassifier(max_depth=i)
         # classifier = RandomForestClassifier(max_depth=i)
         # classifier = MultinomialNB(alpha=i)
